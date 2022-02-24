@@ -1,4 +1,6 @@
-@import url('');
+html{
+    margin: 0%;
+}
 
 html,body{
 height: 100%;
@@ -6,13 +8,14 @@ margin: 0;
 }
 
 
-.bg{
-    background-image: url("/html/iamgem/cao.png");
+#img-bg{
+    background-image: url(https://i.imgur.com/VxxP9y5.png);
+
+    min-height: 1080px;
+
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
 }
 
 .container{
@@ -40,75 +43,14 @@ background-color: rgba(0,0,0,0.5) !important;
 .social_icon span{
 font-size: 30px;
 margin-left: 10px;
-color: #ffffff;
+color: #c24040;
 }
 
 .social_icon span:hover{
-color: rgb(255, 255, 255);
+color: rgb(247, 3, 3);
 cursor: pointer;
 }
 
 .card-header h3{
-color: rgb(255, 255, 255);
-}
-
-.social_icon{
-position: absolute;
-right: 20px;
-top: 30px;
-
-}
-
-.input-group-prepend span{
-width: 50px;
-background-color: #fffefe;
-color: black;
-border:0 !important;
-top: 5px;
-}
-
-.input-group{
-    
-    margin-top: 30px;
-}
-
-input:focus{
-outline: 0 0 0 0  !important;
-box-shadow: 0 0 0 0 !important;
-
-}
-.form-group{
-    top: 15px;
-}
-
-.remember{
-color: rgb(255, 255, 255);
-}
-
-.remember input
-{
-width: 20px;
-height: 20px;
-margin-left: 15px;
-margin-right: 5px;
-}
-
-.login_btn{
-color: rgb(255, 255, 255);
-background-color: #ffffff;
-width: 100px;
-top: 5px;
-}
-
-.login_btn:hover{
-color: rgb(255, 255, 255);
-background-color: rgb(0, 68, 255);
-}
-
-.links{
-color: rgb(255, 255, 255);
-}
-
-.links a{
-margin-left: 4px;
+color: rgb(243, 0, 0);
 }
