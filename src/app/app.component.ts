@@ -1,8 +1,6 @@
 import { Component, NgModule } from '@angular/core';
-import { CadastrarComponent } from './cadastrar/cadastrar.component';
-import { EntrarComponent } from './entrar/entrar.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { RodapeComponent } from './rodape/rodape.component';
+import { AuthService } from './service/auth.service';
+
 
 @Component({
   selector: 'app-root',
@@ -10,16 +8,7 @@ import { RodapeComponent } from './rodape/rodape.component';
   styleUrls: ['./app.component.css']
 })
 
-@NgModule({
-  declarations:[
-    AppComponent,
-    RodapeComponent,
-    EntrarComponent,
-    CadastrarComponent,
-    NavbarComponent
-  ]
 
-})
 export class AppComponent {
-  title = 'Sirius';
+  constructor(public auth: AuthService){}
 }

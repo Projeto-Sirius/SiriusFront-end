@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     RodapeComponent,
     NavbarComponent,
     ErazonComponent
+    
   ],
   imports: [
     BrowserModule,

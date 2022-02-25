@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.prod';
+
 import { UsuarioLogin } from '../model/UsuarioLogin';
 import { AuthService } from '../service/auth.service';
 
@@ -20,19 +21,23 @@ export class EntrarComponent implements OnInit {
   ngOnInit(){
     window.scroll(0,0)
   }
-
+ 
   entrar(){
     this.auth.entrar(this.UserLogin).subscribe((resp:UsuarioLogin)=>{
       this.UserLogin = resp
+      environment.nomeCompleto = this.UserLogin.nomeCompleto
       environment.token = this.UserLogin.token
-      environment.imagem = this.UserLogin.imagem
+      environment.senha = this.UserLogin.senha
+      environment.usuario = this.UserLogin.usuario
       environment.id = this.UserLogin.id
-      environment.nome = this.UserLogin.nome
-
+      environment.foto  = this.UserLogin.foto
+      
       console.log(environment.token)
-      console.log(environment.nome)
-      console.log(environment.imagem)
+      console.log(environment.nomeCompleto)
+      console.log(environment.senha)
+      console.log(environment.usuario)
       console.log(environment.id)
+      console.log(environment.foto)
       this.router.navigate(['/inicio'])
     },erro =>{
       if(erro.status == 500){
