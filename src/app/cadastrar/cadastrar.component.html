@@ -24,10 +24,15 @@
                             <label form="foto">Foto</label>
                             <input [(ngModel)]='user.foto'class="form-control" type="text" name="foto" id="foto" placeholder="Link da foto"> 
                         </div>
-<div class="form-group">
+                        <div class="form-group">
+                            <label form="cSenha"> Senha</label>
+                            <input [(ngModel)] = 'user.senha'class="form-control" type="password" name="cSenha" id="cSenha" placeholder="Confirme sua senha"> 
+                        </div>
+                        <div class="form-group">
                             <label form="cSenha">Confirmar Senha</label>
                             <input (input) = 'confirmSenha($event)'class="form-control" type="password" name="cSenha" id="cSenha" placeholder="Confirme sua senha"> 
                         </div>
+                       
 
                         <div class="form-group">
                             <label form="tipo">Tipo de usuário</label>
