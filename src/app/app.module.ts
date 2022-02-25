@@ -9,6 +9,7 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ErazonComponent } from './erazon/erazon.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ModelComponent } from './model/model.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     EntrarComponent,
     RodapeComponent,
     NavbarComponent,
-    ErazonComponent
+    ErazonComponent,
+    ModelComponent
   ],
   imports: [
     BrowserModule,
