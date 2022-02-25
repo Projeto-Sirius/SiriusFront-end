@@ -12,21 +12,21 @@
 
                         <div class="form-group">
                             <label form="nome">Nome</label>
-                            <input class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome"> 
+                            <input [(ngModel)]='user.nomeCompleto'class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome"> 
                         </div>
 
                         <div class="form-group">
                             <label form="usuario">Usuário</label>
-                            <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário"> 
+                            <input [(ngModel)]='user.usuario'class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário"> 
                         </div>
 
                         <div class="form-group">
                             <label form="foto">Foto</label>
-                            <input class="form-control" type="text" name="foto" id="foto" placeholder="Link da foto"> 
+                            <input [(ngModel)]='user.foto'class="form-control" type="text" name="foto" id="foto" placeholder="Link da foto"> 
                         </div>
 <div class="form-group">
                             <label form="cSenha">Confirmar Senha</label>
-                            <input class="form-control" type="password" name="cSenha" id="cSenha" placeholder="Confirme sua senha"> 
+                            <input (input) = 'confirmSenha($event)'class="form-control" type="password" name="cSenha" id="cSenha" placeholder="Confirme sua senha"> 
                         </div>
 
                         <div class="form-group">
@@ -40,8 +40,8 @@
                         </div>
 
                         <div class="d-flex justify-content-center"> 
-                            <button type="submit" class="btcad mr-5 r">Cadastrar</button>
-                            <button type="submit" class="btcan mr-5" routerLink='/entrar'>Cancelar</button>
+                            <button (click) = 'cadastrar()'type="submit" class="btcad mr-5 r">Cadastrar</button>
+                            <button routerLink = '/entrar'type="submit" class="btcan mr-5" routerLink='/entrar'>Cancelar</button>
                         </div>
                     </div>
 

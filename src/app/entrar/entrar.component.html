@@ -15,7 +15,7 @@
 					<div class= "input-group form-group">
 						<div class="input-group-prepend d-flex ">
 							<span class="input-group-text input-group-prepend "><i class="fa fa-user"></i></span>
-							<input type="text" class="form-control" placeholder="Login">
+							<input [(ngModel)] = 'UsuarioLogin.usuario' type="text" class="form-control" placeholder="Login">
 						</div>
 						
 						
@@ -23,7 +23,7 @@
 					<div class="input-group form-group">
 						<div class="input-group-prepend d-flex">
 							<span class="input-group-text"><i class="fa fa-key"></i></span>
-							<input type="Senha" class="form-control" placeholder="Senha">
+							<input [(ngModel)] = 'UsuarioLogin.senha' type="Senha" class="form-control" placeholder="Senha">
 						</div>
 						
 					</div>
