@@ -1,6 +1,7 @@
 <div class="container-fluid">
     <div class="row" id="img-bg">
     <div class="d-flex justify-content-center  corpo h-100">
+        <form>
         <div class="card ">
             <div class="card-header bg-light">
                 <div class = "d-flex justify-content-start  mt-2">
@@ -17,11 +18,11 @@
                 </div>
             </div>
             <div class="card-body bg-light">
-                <form >
+                
                     <div class= "input-group form-group">
                         <div class="input-group-prepend d-flex justify-content-start">
                             <span class="input-group-text input-group-prepend "><i class="fs  fa fa-user"></i></span>
-                            <input [(ngModel)] = 'UserLogin.usuario' type="text" class="form-control" placeholder="Login">
+                            <input [(ngModel)] = 'UserLogin.usuario' type="text" name = "usuario" class="form-control" placeholder="Login">
                         </div>
                         
                     
@@ -29,7 +30,7 @@
                     <div class="input-group form-group mt-3">
                         <div class="input-group-prepend d-flex justify-content-start ">
                             <span class="input-group-text"><i class="fs fa fa-key"></i></span>
-                            <input [(ngModel)] = 'UserLogin.senha' type="password" class="form-control" placeholder="Senha">
+                            <input [(ngModel)] = 'UserLogin.senha' type="password" name = "senha" class="form-control" placeholder="Senha">
                         </div>
                         
                     </div>
@@ -37,7 +38,6 @@
                     <div class="form-group d-flex justify-content-center ">
                         <input type="submit" (click) = 'entrar()'value="Login" class="btn btn-success mt-3 login_btn">
                     </div>
-                </form>
             </div>
             <div class="card-footer bg-light">
                 <div class="d-flex justify-content-center links">
@@ -49,6 +49,7 @@
                 </div>
             </div>
         </div>
+    </form>
     </div>
 </div>
 </div>

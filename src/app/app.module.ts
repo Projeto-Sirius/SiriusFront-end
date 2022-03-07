@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ErazonComponent } from './erazon/erazon.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
+import { InicioComponent } from './inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     EntrarComponent,
     RodapeComponent,
     NavbarComponent,
-    ErazonComponent
+    ErazonComponent,
+    InicioComponent
     
   ],
   imports: [
