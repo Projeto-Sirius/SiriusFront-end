@@ -1,1 +1,3 @@
+<app-navbar *ngIf="auth.logado()"></app-navbar>
 <router-outlet></router-outlet>
+<app-rodape *ngIf="auth.logado()"></app-rodape>

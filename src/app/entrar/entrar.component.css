@@ -1,5 +1,7 @@
-html{
-    margin: 0%;
+*{
+    margin: 0;
+    box-sizing: border-box;
+    
 }
 
 html,body{
@@ -7,6 +9,9 @@ height: 100%;
 margin: 0;
 }
 
+.container-fluid{
+    padding:0px;
+}
 
 #img-bg{
     background-image: url(https://i.imgur.com/VxxP9y5.png);
@@ -18,13 +23,15 @@ margin: 0;
     background-size: cover;
 }
 
-.container{
-height: 100px;
-align-content: center;
-
-
+.fs{
+    font-size: 1.6em;
+    width:0.8em;
+    height: 1.2em;
 }
 
+.input-group input{
+    width: 19.0em;
+}
 .card{
 height: 100px;
 margin-top: auto;
@@ -47,7 +54,7 @@ color: #c24040;
 }
 
 .social_icon span:hover{
-color: rgb(247, 3, 3);
+color: rgb(54, 54, 54);
 cursor: pointer;
 }
 
