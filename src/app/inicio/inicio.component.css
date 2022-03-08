@@ -17,23 +17,74 @@
 
 .fundo0 {
     margin-top: 20px;
-    background-color: rgb(95, 158, 160);
+    background-color:cadetblue;
     padding:0%;
 }
 
 .fundo,
 .fundo2 {
-    background-color: rgba(255, 255, 255, 0.842);
+    background-color: rgba(218, 254, 255, 0.842);
     background-image: url();
 }
 
 .fundo3 {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("../../assets/My_project_10.png");
+    background-color:rgba(218, 254, 255, 0.842)
 }
 .back{
     background-color:rgb(52, 113, 116);
     
 }
+
+.w30{
+    width: 40%;
+}
+.w70{
+    width: 60%;
+}
+.container-alt{
+    display: flex;
+    align-items: center;
+}
+
+.i-energia{
+    width: 50%;
+    text-align: justify;
+    margin-left:17%;
+}
+
+.social {
+    display: flex;
+    list-style: none;
+    bottom: 10px;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    left: 44px;
+
+  }
+
+ .overlay .about {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    top: 40%;
+    color: #92CFE9;
+    flex: column;
+    font-weight: bold;
+    text-shadow: 3px 3px rgb(0, 0, 0);
+  }
+
+
+.Time1 {
+    position: relative;
+    width: 250px;
+    height: 270px;
+    background-size: cover;
+    cursor: pointer;
+    border: 12px;
+    border-radius: 10px;
+    margin-top: 25px;
+    position: relative;
+
+  }
