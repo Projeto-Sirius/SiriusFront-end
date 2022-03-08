@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
@@ -12,6 +13,8 @@ export class CategoriaService {
   constructor(
 
     private http:HttpClient,
+    private router:Router,
+    private route:ActivatedRoute
     
   ) { }
 
@@ -23,18 +26,18 @@ export class CategoriaService {
     return this.http.get<Categoria[]>('http://localhost:8080/categoria',this.token)
 
   }
-  getByIdCategoria(id:number):Observable<Categoria[]>{
-    return this.http.get<Categoria[]>(`http://localhost:8080/categoria/${id}`,this.token)
+  getByIdCategoria(id: number):Observable<Categoria>{
+    return this.http.get<Categoria>(`http://localhost:8080/tema/${id}`)
 
   }
-  postTema(tema: Categoria):Observable<Categoria>{
+  postTema(categoria: Categoria):Observable<Categoria>{
 
-    return this.http.post<Categoria>('http://localhost:8080/categoria',tema,this.token)
+    return this.http.post<Categoria>('http://localhost:8080/categoria',categoria,this.token)
   }
 
-  putTema(tema:Categoria):Observable<Categoria>{
+  putTema(categoria:Categoria):Observable<Categoria>{
 
-    return this.http.put<Categoria>('http://localhost:8080/categoria',tema,this.token)
+    return this.http.put<Categoria>('http://localhost:8080/categoria',categoria,this.token)
   }
 
   deleteCategoria(id: number){

@@ -12,6 +12,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import { InicioComponent } from './inicio/inicio.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
+import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
+import { CategoriaComponent } from './categoria/categoria.component';
+import { ProdutosDeleteComponent } from './delete/produtos-delete/produtos-delete.component';
+import { ProdutosEditComponent } from './edit/produtos-edit/produtos-edit.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,12 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     RodapeComponent,
     NavbarComponent,
     ErazonComponent,
-    InicioComponent
+    InicioComponent,
+    CategoriaEditComponent,
+    CategoriaDeleteComponent,
+    CategoriaComponent,
+    ProdutosDeleteComponent,
+    ProdutosEditComponent
     
   ],
   imports: [
