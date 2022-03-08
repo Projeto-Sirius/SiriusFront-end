@@ -1,0 +1,37 @@
+.sobre {
+    color: #fff!important;
+    margin-left: 60px;
+}
+
+.title {
+    font-size: 25pt;
+    font-weight: bold;
+    color: rgb(0, 0, 0)!important;
+}
+
+.center {
+    width: 180px;
+    height: 40px;
+    position: absolute;
+}
+
+.fundo0 {
+    margin-top: 20px;
+    background-color: rgb(95, 158, 160);
+}
+
+.fundo,
+.fundo2 {
+    background-color: rgba(255, 255, 255, 0.842);
+    background-image: url();
+}
+
+.fundo3 {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../../assets/My_project_10.png");
+}
+.back{
+    background-color:rgb(52, 113, 116);
+}
