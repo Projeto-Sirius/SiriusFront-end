@@ -28,17 +28,17 @@ export class ProdutoService {
     return this.http.get<Produto[]>(`http://localhost:8080/produtos/${id}`,this.token)
 
   }
-  postTema(tema: Produto):Observable<Produto>{
+  postProduto(tema: Produto):Observable<Produto>{
 
     return this.http.post<Produto>('http://localhost:8080/produtos',tema,this.token)
   }
 
-  putTema(tema:Produto):Observable<Produto>{
+  putProduto(tema:Produto):Observable<Produto>{
 
     return this.http.put<Produto>('http://localhost:8080/produtos',tema,this.token)
   }
 
-  deleteTema(id: number){
+  deleteProduto(id: number){
     return this.http.delete(`http://localhost:8080/produtos/${id}`,this.token)
   }  
 
