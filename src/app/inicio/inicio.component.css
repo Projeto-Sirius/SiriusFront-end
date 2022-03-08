@@ -18,6 +18,7 @@
 .fundo0 {
     margin-top: 20px;
     background-color: rgb(95, 158, 160);
+    padding:0%;
 }
 
 .fundo,
@@ -34,4 +35,5 @@
 }
 .back{
     background-color:rgb(52, 113, 116);
+    
 }
