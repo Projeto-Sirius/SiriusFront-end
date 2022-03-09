@@ -8,6 +8,6 @@ export class Produto{
     public preco: number
     public quantidade:number
     public disponivel:boolean
-    public usuario:User[]
-    public categoria:Categoria[]
+    public usuario:User
+    public categoria:Categoria
 }
