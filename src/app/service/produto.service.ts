@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaderResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 import { Produto } from '../model/Produto';
@@ -13,7 +14,9 @@ export class ProdutoService {
 
   constructor(
 
-    private http:HttpClient
+    private http:HttpClient,
+    private router:Router,
+    private route:ActivatedRoute
   ) { }
 
   token = {
@@ -24,21 +27,21 @@ export class ProdutoService {
     return this.http.get<Produto[]>('http://localhost:8080/produtos',this.token)
 
   }
-  getByIdProduto(id:number):Observable<Produto[]>{
-    return this.http.get<Produto[]>(`http://localhost:8080/produtos/${id}`,this.token)
+  getByIdProduto(id:number):Observable<Produto>{
+    return this.http.get<Produto>(`http://localhost:8080/produtos/${id}`,this.token)
 
   }
-  postTema(tema: Produto):Observable<Produto>{
+  postProduto(produto: Produto):Observable<Produto>{
 
-    return this.http.post<Produto>('http://localhost:8080/produtos',tema,this.token)
+    return this.http.post<Produto>('http://localhost:8080/produtos',produto,this.token)
   }
 
-  putTema(tema:Produto):Observable<Produto>{
+  putProduto(produto:Produto):Observable<Produto>{
 
-    return this.http.put<Produto>('http://localhost:8080/produtos',tema,this.token)
+    return this.http.put<Produto>('http://localhost:8080/produtos',produto,this.token)
   }
 
-  deleteTema(id: number){
+  deleteProduto(id: number){
     return this.http.delete(`http://localhost:8080/produtos/${id}`,this.token)
   }  
 

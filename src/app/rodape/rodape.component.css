@@ -1,7 +1,9 @@
 ul.social-network {
     list-style: none;
     padding: 0;
+    
 }
+
 
 ul.social-network li {
     display: inline;
