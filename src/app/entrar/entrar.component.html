@@ -8,11 +8,11 @@
 
                 <form action="#">
                     <div class="input-field">
-                        <input type="text" placeholder="Email" required>
+                        <input [(ngModel)] = 'UserLogin.usuario' type="text" name = "usuario "placeholder="Email" required>
                         <i class="uil uil-envelope icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="password" placeholder="Senha" required>
+                        <input [(ngModel)] = 'UserLogin.senha'type="password" name = "senha" class="password" placeholder="Senha" required>
                         <i class="uil uil-lock icon"></i>
                         <i class="uil uil-eye-slash showHidePw"></i>
                     </div>
@@ -27,13 +27,13 @@
                     </div>
 
                     <div class="input-field button">
-                        <input type="button" value="Entrar">
+                        <input type="button" (click)= 'entrar()'value="Entrar">
                     </div>
                 </form>
 
                 <div class="login-signup">
                     <span class="text">Não tem conta?
-                        <a href="#" class="text signup-link">cadastre-se</a>
+                        <a href="#" routerLink = '/cadastrar' class="text signup-link">cadastre-se</a>
                     </span>
                 </div>
             </div>
