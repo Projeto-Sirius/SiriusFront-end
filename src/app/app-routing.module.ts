@@ -7,6 +7,7 @@ import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.com
 import { ProdutosEditComponent } from './edit/produtos-edit/produtos-edit.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { SobreComponent } from './sobre/sobre.component';
 
 const routes: Routes = [{ path:'', redirectTo:'entrar', pathMatch:'full'},
 { path:'entrar', component: EntrarComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [{ path:'', redirectTo:'entrar', pathMatch:'full'},
 {path:'tema-delete/:id',component:CategoriaDeleteComponent},
 {path:'produtos-edit/:id',component:ProdutosEditComponent},
 {path:'produtos-delete/:id',component:ProdutosDeleteComponent}
+
 ];
 
 @NgModule({
