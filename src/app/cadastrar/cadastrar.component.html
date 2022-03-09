@@ -1,37 +1,39 @@
 
-<div class="container">
-<div class="wrapper">
-    <h2>Cadastro</h2>
-    <form action="#">
-      <div class="input-box">
-        <input [(ngModel)]='user.nomeCompleto'class="form-control" name = "nomeCompleto" type="text" placeholder="Digite seu nome" required>
-      </div>
-      <div class="input-box">
-        <input [(ngModel)]='user.usuario' class="form-control" name = "usuario" type="text" placeholder="Digite seu email" required>
-      </div>
-      <div class="input-box">
-        <input  [(ngModel)]='user.senha'  class="form-control" name = "senha" type="password" placeholder="Digite senha" required>
-      </div>
-      <div class="input-box">
-        <input (input) = 'confirmSenha($event)' class="form-control" name = "confirmSenha" type="password" placeholder="Confirmar senha" required>
-      </div>
-      <div class = "input-box">
-        <input [(ngModel)]='user.foto' class="form-control" type="text" name = "foto" placeholder="Link da imagem" required>
-      </div>
+
+<body>
+    <div class="wrapper">
+        <h2>Cadastro</h2>
+        <form action="#">
+        <div class="input-box">
+            <input [(ngModel)]='user.nomeCompleto'class="form-control" name = "nomeCompleto" type="text" placeholder="Digite seu nome" required>
+        </div>
+        <div class="input-box">
+            <input [(ngModel)]='user.usuario' class="form-control" name = "usuario" type="text" placeholder="Digite seu email" required>
+        </div>
+        <div class="input-box">
+            <input  [(ngModel)]='user.senha'  class="form-control" name = "senha" type="password" placeholder="Digite senha" required>
+        </div>
+        <div class="input-box">
+            <input (input) = 'confirmSenha($event)' class="form-control" name = "confirmSenha" type="password" placeholder="Confirmar senha" required>
+        </div>
+        <div class = "input-box">
+            <input [(ngModel)]='user.foto' class="form-control" type="text" name = "foto" placeholder="Link da imagem" required>
+        </div>
 
 
-      
-      <div class="policy">
-        <input type="checkbox">
-        <h3>Eu aceito todos os termos e condições</h3>
-      </div>
-      <div class="input-box button">
-        <input type="Submit" (click) = 'cadastrar()' value="Cadastrar">
-      </div>
-      <div class="text">
-        <h3>Já tem uma conta ? <a href="#" routerLink = '/entrar' >Logar agora</a></h3>
-      </div>
-    </form>
-  </div>
+        
+        <div class="policy">
+            <input type="checkbox">
+            <h3>Eu aceito todos os termos e condições</h3>
+        </div>
+        <div class="input-box button">
+            <input type="Submit" (click) = 'cadastrar()' value="Cadastrar">
+        </div>
+        <div class="text">
+            <h3>Já tem uma conta ? <a href="#" routerLink = '/entrar' >Logar agora</a></h3>
+        </div>
+        </form>
+    </div>
 
-</div>
+
+</body>
