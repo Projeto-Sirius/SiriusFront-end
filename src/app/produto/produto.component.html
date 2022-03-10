@@ -11,9 +11,8 @@
   
               <div class="row d-flex justify-content-center mt-3 mb-5">
                   <div class="col-md-6">
-                      <button class="btn btn-light mr-2" data-toggle="modal" data-target="#novaPostagem">Nova
-                          Postagem</button>
-                      <a class="btn btn-outline-light" href="#postagens">Ver Postagens</a>
+                      <button class="btn btn-light mr-2" data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
+                      <a class="btn btn-outline-light" routerLink ='/produto-produto-flix' href="#postagens">Ver Postagens</a>
                   </div>
               </div>
   
@@ -27,61 +26,64 @@
   
   </div>
 
+  
 
 <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
-	aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body">
-				<div class="form-group">
+aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
 
-					<div class="form-group">
-						<label for="titulo">Nome</label>
-						<input [(ngModel)] = 'produto.nome'type="text" class="form-control" id="titulo" name = "nome" placeholder="Titulo">
-					</div>
+                <div class="form-group">
+                    <label for="titulo">Nome</label>
+                    <input [(ngModel)] = 'produto.nome'type="text" class="form-control" id="titulo" name = "nome" placeholder="Titulo">
+                </div>
 
-					<div class="form-group">
-						<label for="texto">Preco</label>
-						<input [(ngModel)] = 'produto.preco'type="text" class="form-control" id="preco" name="preco" placeholder="Digite o Preço">
-					</div>
+                <div class="form-group">
+                    <label for="texto">Preco</label>
+                    <input [(ngModel)] = 'produto.preco'type="text" class="form-control" id="preco" name="preco" placeholder="Digite o Preço">
+                </div>
 
-                    <div class="form-group">
-						<label for="texto">Quantidade</label>
-						<input [(ngModel)] = 'produto.quantidade'type="text" class="form-control" id="quantidade" name="quantidade" placeholder="Digite a Quantidade">
-					</div>
+                <div class="form-group">
+                    <label for="texto">Quantidade</label>
+                    <input [(ngModel)] = 'produto.quantidade'type="text" class="form-control" id="quantidade" name="quantidade" placeholder="Digite a Quantidade">
+                </div>
 
-                    <div class="form-group">
-						<label for="texto">Foto</label>
-						<input [(ngModel)] = 'produto.foto'type="text" class="form-control" id="fotos" name="fotos" placeholder="Link da foto">
-					</div>
+                <div class="form-group">
+                    <label for="texto">Foto</label>
+                    <input [(ngModel)] = 'produto.foto' type="text" class="form-control" id="fotos" name="fotos" placeholder="Link da foto">
+                </div>
 
-                    <div class="form-group">
-						<label for="texto">Escolha um Tema</label>
-						<select name="categoria" id="categoria" class="form-control" [(ngModel)] = 'idCategoria' (change) = 'findByIdCategoria()'>
-							<option *ngFor ='let item of listaCategoria'value="{{item.id}}">{{item.nome}}</option>
-						</select>
-					</div>
+                <div class="form-group">
+                    <label for="texto">Escolha um Tema</label>
+                    <select name="categoria" id="categoria" class="form-control" [(ngModel)] = 'idCategoria' (change) = 'findByIdCategoria()'>
+                        <option *ngFor ='let item of listaCategoria'value="{{item.id}}">{{item.nome}}</option>
+                    </select>
+                </div>
 
 
-					<div class="form-group">
-						<label for="texto">Escolha um Produto ou <a data-dismiss = "modal" routerLink = "/produto-fix">cadastre um novo </a></label>
-						<select name="produto" id="produto" class="form-control" [(ngModel)] = 'idProduto' (change) = 'findByIdProdutos()'>
-							<option *ngFor ='let item of listaProdutos'value="{{item.id}}">{{item.nome}}</option>
-						</select>
-					</div>
+                <div class="form-group">
+                    <label for="texto">Escolha um Produto ou <a data-dismiss = "modal" routerLink = "/produto-fix">cadastre um novo </a></label>
+                    <select name="produto" id="produto" class="form-control" [(ngModel)] = 'idProduto' (change) = 'findByIdProdutos()'>
+                        <option *ngFor ='let item of listaProdutos'value="{{item.id}}">{{item.nome}}</option>
+                    </select>
+                </div>
 
-				</div>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-				<button type="button" class="btn btn-success"(click) = 'publicar()'>Publicar</button>
-			</div>
-		</div>
-	</div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-success"(click) = 'publicar()'>Publicar</button>
+        </div>
+    </div>
 </div>
+</div>
+
+  
