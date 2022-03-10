@@ -11,15 +11,18 @@
             <h5 class = "text-center text-secondary">Você tem certeza que deseja apagar a postagem ?</h5>
         </div>
     </div>
-    <!---->
+
     <div class = "row d-flex justify-content-center mt-4">
         <div class="col-md-4">
 
             <div class="card text-center ">
                 <div class="card-body">
-                  <h5 class="card-title mb-0">{{produto.nome}}</h5>
-                  <small class = "text-muted ">Tema: {{produto.categoria.nome}}</small>
-                  <p class="card-text mb-3">{{produto.preco}}</p>
+                  <h5 class="card-title mb-0">{{postagem.titulo}}</h5>
+                  <small class = "text-muted ">Tema: {{postagem.tema.descricao}}</small>
+                  <p class="card-text mb-3">{{postagem.texto}}</p>
+                  <p class="card-text"><small class="text-muted">
+                      {{postagem.data| date: 'dd//MM/yyyy'}}às {{postagem.data| date :'HH:mm'}}</small></p>
+                  <p class = "card-text"><small class = "text-muted">by:{{postagem.usuario.nome}}</small></p>
                 </div>
             </div>
 

@@ -7,7 +7,6 @@ export class Produto{
     public nome:string
     public preco: number
     public quantidade:number
-    public disponivel:boolean
     public usuario:User
     public categoria:Categoria
 }

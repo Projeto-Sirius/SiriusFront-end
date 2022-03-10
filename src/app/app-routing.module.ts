@@ -10,7 +10,7 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ProdutoFixComponent } from './produto-fix/produto-fix.component';
 import { ProdutoComponent } from './produto/produto.component';
-import { SobreComponent } from './sobre/sobre.component';
+
 
 const routes: Routes = [
 { path:'', redirectTo:'entrar', pathMatch:'full'},
@@ -22,7 +22,9 @@ const routes: Routes = [
 {path:'produtos-edit/:id',component:ProdutosEditComponent},
 {path:'produtos-delete/:id',component:ProdutosDeleteComponent},
 {path: 'detalhes-produto', component:DetalhesProdutoComponent},
-{path:'produtos',component:ProdutoFixComponent}
+{path:'produto',component:ProdutoComponent},
+{path:'produto-flix',component:ProdutoFixComponent}
+
 
 ];
 
