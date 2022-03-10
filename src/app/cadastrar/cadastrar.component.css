@@ -1,6 +1,4 @@
-/*Novo*/
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -9,90 +7,173 @@
   
 }
 body{
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #4070f4;
+  background-color: #98d3de;
 }
-.wrapper{
+.container{
   position: relative;
   max-width: 430px;
   width: 100%;
   background: #fff;
-  padding: 34px;
-  border-radius: 6px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin: 0 20px;
 }
-.wrapper h2{
+
+.container .forms{
+  display: flex;
+  align-items: center;
+  height: 550px;
+  width: 200%;
+  transition: height 0.2s ease;
+}
+
+.container .form{
+  width: 50%;
+  padding: 30px;
+  background-color: #fff;
+  transition: margin-left 0.18s ease;
+}
+
+
+.container.active .cadastrar{
+  margin-left: -50%;
+  opacity: 0;
+  transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container .signup{
+  opacity: 0;
+  transition: opacity 0.09s ease;
+}
+
+.container.active .signup{
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.container.active .forms{
+  height: 600px;
+}
+
+.container .form .title{
   position: relative;
-  font-size: 22px;
+  font-size: 27px;
   font-weight: 600;
-  color: #333;
 }
-.wrapper h2::before{
+
+.form .title::before{
   content: '';
   position: absolute;
   left: 0;
   bottom: 0;
   height: 3px;
-  width: 28px;
-  border-radius: 12px;
-  background: #4070f4;
+  width: 30px;
+  background-color: #4070f4;
+  border-radius: 25px;
 }
-.wrapper form{
-  margin-top: 30px;
+
+.form .input-field{
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 15px;
 }
-.wrapper form .input-box{
-  height: 52px;
-  margin: 18px 0;
-}
-form .input-box input{
+
+.input-field input{
+  position: absolute;
   height: 100%;
   width: 100%;
+  padding: 0 35px;
+  border: none;
   outline: none;
-  padding: 0 15px;
-  font-size: 17px;
-  font-weight: 400;
-  color: #333;
-  border: 1.5px solid #C7BEBE;
-  border-bottom-width: 2.5px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
+  font-size: 16px;
+  border-bottom: 2px solid #ccc;
+  border-top: 2px solid transparent;
+  transition: all 0.2s ease;
 }
-.input-box input:focus,
-.input-box input:valid{
-  border-color: #4070f4;
+
+.input-field input:is(:focus, :valid){
+  border-bottom-color: #4070f4;
 }
-form .policy{
+
+.input-field i{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 23px;
+  transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ i{
+  color: #4070f4;
+}
+
+.input-field i.icon{
+  left: 0;
+}
+.input-field i.showHidePw{
+  right: 0;
+  cursor: pointer;
+  padding: 1opx;
+}
+
+.form .checkbox-text{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.checkbox-text .checkbox-content{
   display: flex;
   align-items: center;
 }
-form h3{
-  color: #707070;
+
+.checkbox-content input{
+  margin: 0 8px -2px 4px;
+  accent-color: #4070f4;
+}
+
+.form .text{
+  color: #333;
   font-size: 14px;
-  font-weight: 500;
-  margin-left: 10px;
 }
-.input-box.button input{
-  color: #fff;
-  letter-spacing: 1px;
-  border: none;
-  background: #4070f4;
-  cursor: pointer;
-}
-.input-box.button input:hover{
-  background: #0e4bf1;
-}
-form .text h3{
- color: #333;
- width: 100%;
- text-align: center;
-}
-form .text h3 a{
+
+.form a.text{
   color: #4070f4;
   text-decoration: none;
 }
-form .text h3 a:hover{
+.form a:hover{
   text-decoration: underline;
+}
+
+.form .button{
+  margin-top: 15px;
+}
+
+.form .button input{
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  background-color: #4070f4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button input:hover{
+  background-color: #265df2;
+}
+
+.form .login-signup{
+  margin-top: 15px;
+  text-align: center;
 }

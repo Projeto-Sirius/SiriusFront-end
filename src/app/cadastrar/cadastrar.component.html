@@ -1,39 +1,53 @@
-
-
 <body>
-    <div class="wrapper">
-        <h2>Cadastro</h2>
-        <form action="#">
-        <div class="input-box">
-            <input [(ngModel)]='user.nomeCompleto'class="form-control" name = "nomeCompleto" type="text" placeholder="Digite seu nome" required>
-        </div>
-        <div class="input-box">
-            <input [(ngModel)]='user.usuario' class="form-control" name = "usuario" type="text" placeholder="Digite seu email" required>
-        </div>
-        <div class="input-box">
-            <input  [(ngModel)]='user.senha'  class="form-control" name = "senha" type="password" placeholder="Digite senha" required>
-        </div>
-        <div class="input-box">
-            <input (input) = 'confirmSenha($event)' class="form-control" name = "confirmSenha" type="password" placeholder="Confirmar senha" required>
-        </div>
-        <div class = "input-box">
-            <input [(ngModel)]='user.foto' class="form-control" type="text" name = "foto" placeholder="Link da imagem" required>
-        </div>
+    <img src="https://i.imgur.com/Okrby96.png[/img]" alt="imagem de fundo do lodo so sirius">
+    <div class="container">
+        <div class="forms">
+            <div class="form cadastrar">
+                <span class="title">Cadastrar</span>
 
+                <form action="#">
+                    <div class="input-field">
+                        <input [(ngModel)]='user.nomeCompleto'class="form-control" name = "nomeCompleto" type="text" placeholder="Digite seu nome" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input [(ngModel)]='user.usuario' class="form-control" name = "usuario" type="text" placeholder="Digite seu email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input  [(ngModel)]='user.senha'  class="form-control" name = "senha" type="password" placeholder="Digite senha" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input (input) = 'confirmSenha($event)' class="form-control" name = "confirmSenha" type="password" placeholder="Confirmar senha" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input [(ngModel)]='user.foto' class="form-control" type="text" name = "foto" placeholder="Link da imagem" required>
+                        <i class="uil uil-envelope icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
 
-        
-        <div class="policy">
-            <input type="checkbox">
-            <h3>Eu aceito todos os termos e condições</h3>
+                    <div class="checkbox-text">
+                        <div class="checkbox-text">
+                            <input type="checkbox" id="aceitarTermoCheck">
+                            <label for="aceitarTermoCheck" class="text"> Eu aceito todos os termos e condições</label>
+                        </div>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="Submit" (click) = 'cadastrar()' value="Cadastrar">
+                    </div>
+
+                    <div class="login-signup">
+                        <span class="text">
+                            Já tem uma conta? <a href="#" routerLink = '/entrar' > Logue agora </a>
+                        </span>
+                    </div>
+
+                </form>
+            </div>
+
         </div>
-        <div class="input-box button">
-            <input type="Submit" (click) = 'cadastrar()' value="Cadastrar">
-        </div>
-        <div class="text">
-            <h3>Já tem uma conta ? <a href="#" routerLink = '/entrar' >Logar agora</a></h3>
-        </div>
-        </form>
     </div>
-
-
 </body>
