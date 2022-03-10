@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Produto } from '../model/Produto';
+import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
@@ -11,14 +12,17 @@ import { ProdutoService } from '../service/produto.service';
 })
 export class ProdutoComponent implements OnInit {
   
-  produtoService:ProdutoService
+  
   produto:Produto = new Produto()
   listaProdutos:Produto[]
   idProduto: number
   idUser = environment.id
 
   constructor( private router:Router,
-    private route: ActivatedRoute,) { }
+    private route: ActivatedRoute,
+    private produtoService:ProdutoService,
+    private categoriaService: CategoriaService,
+    ) { }
 
   ngOnInit(){
     window.scroll(0,0)

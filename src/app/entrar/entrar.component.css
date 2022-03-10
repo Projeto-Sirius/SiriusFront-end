@@ -1,52 +1,5 @@
 *{
     margin: 0;
-<<<<<<< HEAD
-    box-sizing: border-box;
-    
-}
-
-html,body{
-height: 100%;
-margin: 0;
-}
-
-.container-fluid{
-    padding:0px;
-}
-
-#img-bg{
-    background-image: url(https://i.imgur.com/VxxP9y5.png);
-
-    min-height: 1080px;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.fs{
-    font-size: 1.6em;
-    width:0.8em;
-    height: 1.2em;
-}
-
-.input-group input{
-    width: 19.0em;
-}
-.card{
-height: 100px;
-margin-top: auto;
-margin-bottom: auto;
-width: 400px;
-background-color: rgba(0,0,0,0.5) !important;
-}
-.corpo{
-    justify-content: flex-end;
-    margin-top: 70px;
-    margin-right: 5;
-    
-
-=======
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
@@ -77,10 +30,8 @@ body{
     height: 440px;
     width: 200%;
     transition: height 0.2s ease;
->>>>>>> 763de5792329bc4047b3a7ab29491da4ae4ec0ac
+
 }
-
-
 .container .form{
     width: 50%;
     padding: 30px;
@@ -88,16 +39,9 @@ body{
     transition: margin-left 0.18s ease;
 }
 
-<<<<<<< HEAD
 .social_icon span:hover{
 color: rgb(54, 54, 54);
 cursor: pointer;
-=======
-.container.active .login{
-    margin-left: -50%;
-    opacity: 0;
-    transition: margin-left 0.18s ease, opacity 0.15s ease;
->>>>>>> 763de5792329bc4047b3a7ab29491da4ae4ec0ac
 }
 
 .container .signup{

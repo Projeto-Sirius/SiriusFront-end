@@ -1,12 +1,40 @@
-<div class="row d-flex justify-content-center">
-    <div class="col-md-3 my-5" *ngFor="let item of listaProdutos">
-        <div class="card " *ngFor='let contador of listaProdutos'>
-            <img class="card-img-top" src="" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">{{contador.nome}}</h5>
-                <p class="card-text">{{contador.preco}}</p>
-                <p class="card-text"><small class="text-muted">{{contador.disponivel}}</small></p>
-            </div>
-        </div>
-    </div>
+<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+
+					<div class="form-group">
+						<label for="titulo">Titulo</label>
+						<input [(ngModel)] = 'postagem.titulo'type="text" class="form-control" id="titulo" placeholder="Titulo">
+					</div>
+
+					<div class="form-group">
+						<label for="texto">Texto</label>
+						<textarea [(ngModel)] = 'postagem.texto' class="form-control" id="texto" name="texto" row="3"
+							placeholder="Digite sua Postagem"></textarea>
+					</div>
+
+					<div class="form-group">
+						<label for="texto">Escolha um Tema ou <a data-dismiss = "modal" routerLink = "/tema">cadastre um novo </a></label>
+						<select name="tema" id="tema" class="form-control" [(ngModel)] = 'idTema' (change) = 'findByIdTema()'>
+							<option *ngFor ='let item of listaTemas'value="{{item.id}}">{{item.descricao}}</option>
+						</select>
+					</div>
+
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+				<button type="button" class="btn btn-success"(click) = 'publicar()'>Publicar</button>
+			</div>
+		</div>
+	</div>
 </div>

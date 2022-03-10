@@ -44,6 +44,5 @@ import { AuthService } from '../service/auth.service';
   
       }
     }
->>>>>>> 763de5792329bc4047b3a7ab29491da4ae4ec0ac
 
 }

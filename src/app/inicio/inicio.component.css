@@ -136,7 +136,10 @@
 
 
 /* nossas fotos  */
+.mcard{
+    width: 25%;
 
+}
 .Bia {
     position: relative;
     width: 250px;
