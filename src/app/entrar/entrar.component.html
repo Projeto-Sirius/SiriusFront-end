@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container-fluid">
 	<div class="row" id="img-bg">
 	<div class="d-flex justify-content-center  corpo h-100">
@@ -51,3 +52,47 @@
 	</div>
 </div>
 </div>
+=======
+<body>
+    <img src="https://i.imgur.com/Okrby96.png[/img]" alt="">
+    <div class="container">
+        
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Entrar</span>
+
+                <form action="#">
+                    <div class="input-field">
+                        <input [(ngModel)] = 'UserLogin.usuario' type="text" name = "usuario "placeholder="Email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input [(ngModel)] = 'UserLogin.senha'type="password" name = "senha" class="password" placeholder="Senha" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Manter conectado</label>
+                        </div>
+                        
+                        <a href="#" class="text">Esqueceu a senha?</a>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="button" (click)= 'entrar()'value="Entrar">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Não tem conta?
+                        <a href="#" routerLink = '/cadastrar' class="text signup-link">cadastre-se</a>
+                    </span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+>>>>>>> 763de5792329bc4047b3a7ab29491da4ae4ec0ac

@@ -1,0 +1,367 @@
+.sobre {
+    color: #fff!important;
+    margin-left: 60px;
+}
+
+.title {
+    font-size: 25pt;
+    font-weight: bold;
+    color: rgb(0, 0, 0)!important;
+}
+
+.center {
+    width: 180px;
+    height: 40px;
+    position: absolute;
+}
+
+.fundo0 {
+    
+    background-color:cadetblue;
+    padding:0%;
+}
+
+.fundo,
+.fundo2 {
+    background-color: rgba(218, 254, 255, 0.842);
+    background-image: url();
+}
+
+.fundo3 {
+    background-color:rgba(218, 254, 255, 0.842)
+}
+.back{
+    background-color:rgb(52, 113, 116);
+    
+}
+
+.w30{
+    width: 40%;
+}
+.w70{
+    width: 60%;
+}
+.container-alt{
+    display: flex;
+    align-items: center;
+}
+
+.i-energia{
+    width: 50%;
+    text-align: justify;
+    margin-left:17%;
+}
+
+.social {
+    display: flex;
+    list-style: none;
+    bottom: 10px;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    left: 44px;
+
+  }
+
+ .overlay .about {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    top: 40%;
+    color: #92CFE9;
+    flex: column;
+    font-weight: bold;
+    text-shadow: 3px 3px rgb(0, 0, 0);
+  }
+
+
+.Time1 {
+    position: relative;
+    width: 250px;
+    height: 270px;
+    background-size: cover;
+    cursor: pointer;
+    border: 12px;
+    border-radius: 10px;
+    margin-top: 25px;
+    position: relative;
+
+  }
+
+
+/* Cards dos dev*/
+
+.card-title {
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+
+.card-img-top {
+    width: 150px !important;
+}
+
+.card {
+    margin-right: 5px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin: 25px 0px;
+    flex-wrap: wrap;
+    margin-right: 5px;
+    background-color: rgba(255, 255, 255, 0.301);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+}
+
+.card-text {
+    text-align: center;
+    color: #fff;
+}
+
+.text-config {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.card-group {
+    margin-bottom: 42px;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+
+/* nossas fotos  */
+
+.Bia {
+    position: relative;
+    width: 250px;
+    height: 270px;
+    background: url("https://media-exp1.licdn.com/dms/image/C4D03AQFPuXGKjFNAkg/profile-displayphoto-shrink_400_400/0/1611367667986?e=1652313600&v=beta&t=bo9dP0o9VzkhUyDyr1ceG1WE0OcFzevZj5Kiy3jI1zQ");
+    background-size: cover;
+    cursor: pointer;
+    border: 12px;
+    border-radius: 10px;
+    margin-top: 25px;
+    position: relative;
+}
+
+.Marlom {
+    position: relative;
+    width: 250px;
+    height: 270px;
+    background: url("https://avatars.githubusercontent.com/u/95311071?v=4");
+    background-size: cover;
+    cursor: pointer;
+    border: 12px;
+    border-radius: 10px;
+    margin-top: 25px;
+    position: relative;
+}
+
+.Rodrigo {
+    position: relative;
+    width: 250px;
+    height: 270px;
+    background: url("https://avatars.githubusercontent.com/u/95310379?v=4");
+    background-size: cover;
+    cursor: pointer;
+    border: 12px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+.Ale {
+    position: relative;
+    width: 250px;
+    height: 270px;
+    background: url("https://avatars.githubusercontent.com/u/94928551?v=4");
+    background-size: cover;
+    cursor: pointer;
+    border: 12px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+.Maju {
+    position: relative;
+    width: 250px;
+    height: 270px;
+    background: url("https://avatars.githubusercontent.com/u/86813022?v=4");
+    background-size: cover;
+    cursor: pointer;
+    border: 12px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+.Marcos {
+    position: relative;
+    width: 250px;
+    height: 270px;
+    background: url("https://avatars.githubusercontent.com/u/95704694?v=4");
+    background-size: cover;
+    cursor: pointer;
+    border: 12px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 5, 77, 0.8);
+    border-radius: 12px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 1s;
+    border-radius: 10px;
+}
+
+.Bia :hover {
+    opacity: 1;
+    transform: translateY(12px);
+    transition: 0.5s;
+}
+
+.Marlom :hover {
+    opacity: 1;
+    transform: translateY(12px);
+    transition: 0.5s;
+}
+
+.Rodrigo :hover {
+    opacity: 1;
+    transform: translateY(12px);
+    transition: 0.5s;
+}
+
+.Ale :hover {
+    opacity: 1;
+    transform: translateY(12px);
+    transition: 0.5s;
+}
+
+.Maju :hover {
+    opacity: 1;
+    transform: translateY(12px);
+    transition: 0.5s;
+}
+
+.Marcos :hover {
+    opacity: 1;
+    transform: translateY(12px);
+    transition: 0.5s;
+}
+
+.Bia:hover .overlay {
+    opacity: 1;
+    transition: 0.5s;
+    background-image: url("https://media.giphy.com/media/cKSzOUT4e82UZ4n1yN/giphy.gif");
+    position: center;
+    width: 250px;
+    height: 270px;
+    background-size: cover;
+    border: 12px;
+}
+
+.Ale:hover .overlay {
+    opacity: 1;
+    transition: 0.5s;
+    background-image: url("https://media.giphy.com/media/cKSzOUT4e82UZ4n1yN/giphy.gif");
+    position: center;
+    width: 250px;
+    height: 270px;
+    background-size: cover;
+    border: 12px;
+}
+
+.Maju:hover .overlay {
+    opacity: 1;
+    transition: 0.5s;
+    background-image: url("https://media.giphy.com/media/cKSzOUT4e82UZ4n1yN/giphy.gif");
+    position: center;
+    width: 250px;
+    height: 270px;
+    background-size: cover;
+    border: 12px;
+}
+
+.Rodrigo:hover .overlay {
+    opacity: 1;
+    transition: 0.5s;
+    background-image: url("https://media.giphy.com/media/cKSzOUT4e82UZ4n1yN/giphy.gif");
+    position: center;
+    width: 250px;
+    height: 270px;
+    background-size: cover;
+    border: 12px;
+}
+
+.Marlom:hover .overlay {
+    opacity: 1;
+    transition: 0.5s;
+    background-image: url("https://media.giphy.com/media/cKSzOUT4e82UZ4n1yN/giphy.gif");
+    position: center;
+    width: 250px;
+    height: 270px;
+    background-size: cover;
+    border: 12px;
+}
+
+.Marcos:hover .overlay {
+    opacity: 1;
+    transition: 0.5s;
+    background-image: url("https://media.giphy.com/media/cKSzOUT4e82UZ4n1yN/giphy.gif");
+    position: center;
+    width: 250px;
+    height: 270px;
+    background-size: cover;
+    border: 12px;
+}
+
+
+/* Icons likedin/github */
+
+.tm-social li a {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #fffffffa;
+    padding: 20px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 5px;
+    transition: all 1s;
+}
+
+.tm-social {
+    display: flex;
+    list-style: none;
+    bottom: 10px;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    left: 44px;
+}
+
+.overlay .about {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    top: 40%;
+    color: #ffffff;
+    flex: column;
+    font-weight: bold;
+    text-shadow: 3px 3px rgb(0, 0, 0);
+}
+
+
+/* Cards dos dev*/

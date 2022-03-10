@@ -1,52 +1,53 @@
-<div class="conteiner-fluid ">
+<body>
+    <img src="https://i.imgur.com/Okrby96.png[/img]" alt="imagem de fundo do lodo so sirius">
+    <div class="container">
+        <div class="forms">
+            <div class="form cadastrar">
+                <span class="title">Cadastrar</span>
+                <form action="#">
+                    <div class="input-field">
+                        <input [(ngModel)]='user.nomeCompleto'class="form-control" name = "nomeCompleto" type="text" placeholder="Digite seu nome" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input [(ngModel)]='user.usuario' class="form-control" name = "usuario" type="text" placeholder="Digite seu email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input  [(ngModel)]='user.senha'  class="form-control" name = "senha" type="password" placeholder="Digite senha" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input (input) = 'confirmSenha($event)' class="form-control" name = "confirmSenha" type="password" placeholder="Confirmar senha" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input [(ngModel)]='user.foto' class="form-control" type="text" name = "foto" placeholder="Link da imagem" required>
+                        <i class="uil uil-envelope icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
 
-    <div class="row" id="img-bg">
-
-        <div class="col-md-12 mt-5 mb-5">
-
-                <div class="row d-flex justify-content-center">
-                    <div class="col-md-5">
-
-                        <h1 class="text-center">Cadastro</h1>
-
-                        <div class="form-group">
-                            <label form="nome">Nome</label>
-                            <input class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome"> 
-                        </div>
-
-                        <div class="form-group">
-                            <label form="usuario">Usuário</label>
-                            <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário"> 
-                        </div>
-
-                        <div class="form-group">
-                            <label form="foto">Foto</label>
-                            <input class="form-control" type="text" name="foto" id="foto" placeholder="Link da foto"> 
-                        </div>
-<div class="form-group">
-                            <label form="cSenha">Confirmar Senha</label>
-                            <input class="form-control" type="password" name="cSenha" id="cSenha" placeholder="Confirme sua senha"> 
-                        </div>
-
-                        <div class="form-group">
-                            <label form="tipo">Tipo de usuário</label>
-                            <select class="form-control" name="tipo" id="tipo">
-                                <option>Selecione o tipo de usuário</option>
-                                <option value="adm">Pessoa Jurídica</option>
-                                <option value="normal">Pessoa Fícica</option>
-                            </select>
-
-                        </div>
-
-                        <div class="d-flex justify-content-center"> 
-                            <button type="submit" class="btcad mr-5">Cadastrar</button>
-                            <button type="submit" class="btcan mr-5" routerLink='/entrar'>Cancelar</button>
+                    <div class="checkbox-text">
+                        <div class="checkbox-text">
+                            <input type="checkbox" id="aceitarTermoCheck">
+                            <label for="aceitarTermoCheck" class="text"> Eu aceito todos os termos e condições</label>
+>>>>>>> 763de5792329bc4047b3a7ab29491da4ae4ec0ac
                         </div>
                     </div>
 
+                    <div class="input-field button">
+                        <input type="Submit" (click) = 'cadastrar()' value="Cadastrar">
+                    </div>
+
+                    <div class="login-signup">
+                        <span class="text">
+                            Já tem uma conta? <a href="#" routerLink = '/entrar' > Logue agora </a>
+                        </span>
+                    </div>
+
+                </form>
             </div>
 
         </div>
     </div>
-
-</div>
+</body>

@@ -1,0 +1,12 @@
+<div class="row d-flex justify-content-center">
+    <div class="col-md-3 my-5" *ngFor="let item of listaProdutos">
+        <div class="card " *ngFor='let contador of listaProdutos'>
+            <img class="card-img-top" src="" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{contador.nome}}</h5>
+                <p class="card-text">{{contador.preco}}</p>
+                <p class="card-text"><small class="text-muted">{{contador.disponivel}}</small></p>
+            </div>
+        </div>
+    </div>
+</div>

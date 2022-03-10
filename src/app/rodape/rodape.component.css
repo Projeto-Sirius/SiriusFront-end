@@ -1,7 +1,9 @@
 ul.social-network {
     list-style: none;
     padding: 0;
+    
 }
+
 
 ul.social-network li {
     display: inline;
@@ -21,4 +23,8 @@ ul.social-network li {
 
 .fa-github:hover {
     color: blueviolet;
+}
+
+.fa-instagram:hover{
+    color: #b6299e;
 }
