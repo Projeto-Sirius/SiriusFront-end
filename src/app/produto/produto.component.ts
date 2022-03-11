@@ -26,7 +26,7 @@ export class ProdutoComponent implements OnInit {
   user:User = new User
 
   constructor( private router:Router,
-    private route: ActivatedRoute,
+    
     private produtoService:ProdutoService,
     private categoriaService: CategoriaService,
     private authService:AuthService

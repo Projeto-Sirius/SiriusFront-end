@@ -5,21 +5,21 @@
               <div class="row d-flex justify-content-center">
                   <div class="col-md-6 text-white">
                       <h1 class='fs-54'>Seja bem vindo(a)!</h1>
-                      <h5 class='fs-18'>Expresse aqui seus pensamento!</h5>
+                      <h5 class='fs-18'>Veja ou adicione produtos</h5>
                   </div>
               </div>
   
               <div class="row d-flex justify-content-center mt-3 mb-5">
                   <div class="col-md-6">
-                      <button class="btn btn-light mr-2" data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
-                      <a class="btn btn-outline-light" routerLink ='/produto-produto-flix' href="#postagens">Ver Postagens</a>
+                      <button class="btn btn-light mr-2" data-toggle="modal" data-target="#novaPostagem">Novo Produto</button>
+                      <a class="btn btn-outline-light" routerLink ='/produto-flix' href="#postagens">Ver Produtos</a>
                   </div>
               </div>
   
           </div>
   
           <div class="col-md-6 d-flex justify-content-center">
-              <img src="https://i.imgur.com/XOcrb85.png" alt="pessoas mandando" width=500px height=500px mensagem>
+              <img src="https://i.imgur.com/XOcrb85.png" alt="foto" width=500px height=500px mensagem>
   
           </div>
       </div>
@@ -33,7 +33,7 @@ aria-hidden="true">
 <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
+            <h5 class="modal-title" id="TituloModalCentralizado">Novo produto</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -86,4 +86,42 @@ aria-hidden="true">
 </div>
 </div>
 
-  
+<div class="container">
+
+    <h2>Todos os Produtos</h2>
+    <p>Voltados a diversificação da matriz energética</p>
+
+ <div class="row " *ngFor = 'produto of listaProdutos'>
+        <div class="card ">
+            <div height="10px">
+                <img class="card-img-top img-tmh "
+                    src="https://images.tcdn.com.br/img/img_prod/652644/coletor_solar_black_tech_381_1_5dddb2d5edf2a9e63a9f35c712abb89d.jpg"
+                    alt="Imagem de capa do card">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Coletor Solar BLACK TECH 200 x 100 </h5>
+                <p class="card-text">Preço:R$2600,00 </p>
+                <a href="#" [routerLink]="" class="btn btn-primary">Conferir</a>
+            </div>
+        </div>
+    </div>
+
+<div class="container">
+
+    <div class="row " *ngFor = 'produto of listaProdutos'>
+        <div class="card ">
+            <div height="10px">
+                <img class="card-img-top img-tmh "
+                    src="https://images.tcdn.com.br/img/img_prod/652644/coletor_solar_black_tech_381_1_5dddb2d5edf2a9e63a9f35c712abb89d.jpg"
+                    alt="Imagem de capa do card">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Coletor Solar BLACK TECH 200 x 100 </h5>
+                <p class="card-text">Preço:R$2600,00 </p>
+                <a href="#" [routerLink]="" class="btn btn-primary">Conferir</a>
+            </div>
+        </div>
+    </div>
+
+
+</div>

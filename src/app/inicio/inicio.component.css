@@ -1,6 +1,7 @@
 .sobre {
     color: #fff!important;
     margin-left: 60px;
+
 }
 
 .title {
@@ -368,3 +369,6 @@
 
 
 /* Cards dos dev*/
+.fs-18{
+    font-size: 18px;
+}

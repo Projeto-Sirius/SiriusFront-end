@@ -16,7 +16,7 @@ export class ProdutoFixComponent implements OnInit {
     private produtoService:ProdutoService,
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
     this.getAllProdutos()
   }
 
