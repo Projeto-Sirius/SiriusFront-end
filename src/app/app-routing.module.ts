@@ -7,6 +7,7 @@ import { DetalhesProdutoComponent } from './detalhes-produto/detalhes-produto.co
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { ProdutosEditComponent } from './edit/produtos-edit/produtos-edit.component';
 import { EntrarComponent } from './entrar/entrar.component';
+import { ErazonComponent } from './erazon/erazon.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ProdutoFixComponent } from './produto-fix/produto-fix.component';
 import { ProdutoComponent } from './produto/produto.component';
@@ -23,7 +24,8 @@ const routes: Routes = [
 {path:'produtos-delete/:id',component:ProdutosDeleteComponent},
 {path: 'detalhes-produto', component:DetalhesProdutoComponent},
 {path:'produto',component:ProdutoComponent},
-{path:'produto-flix',component:ProdutoFixComponent}
+{path:'produto-flix',component:ProdutoFixComponent},
+{path: 'erazon',component:ErazonComponent}
 
 
 ];
