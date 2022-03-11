@@ -1,1 +1,45 @@
-<p>produtos-edit works!</p>
+<div class="container mt-5 mb-5">
+
+
+    <div class = "row">
+        <div class = "col-md-12">
+            <h1 class = "text-center text-secondary">Atualizar</h1>
+        </div>
+    </div>
+
+    <div class = "row d-flex justify-content-center">
+        <div class = "col-md-6">
+            <div class = "form-group">
+                <label for = "nome">Nome</label>
+                <input [(ngModel)]='produto.nome' class = "form-control" type = "text" name = "nome"
+                 placeholder = "Digite o nome">
+            </div>
+            <div class = "form-group">
+                <label for = "usuario">Foto</label>
+                <input [(ngModel)]='produto.foto'class = "form-control" type = "text" name = "foto"
+                 placeholder = "Link da foto">
+            </div>
+            <div class = "form-group">
+                <label for = "foto">Preco</label>
+                <input [(ngModel)]='produto.preco'class = "form-control" type = "text" name = "preco"
+                 placeholder = "Digite o preço">
+            </div>
+            <div class = "form-group">
+                <label for = "quantidade">Quantidade</label>
+                <input [(ngModel)]='produto.quantidade' class = "form-control" type = "text" name = "quantidade"
+                 placeholder = "Digite a quantidade">
+            </div>
+        </div>
+
+        <div class = "d-flex justify-content-center ">
+            <button type = "submit" routerLink = "/produto" class = "btn btn-danger">Cancelar</button>
+            <button (click) = 'atualizar()'type = "submit" class = "btn btn-success ml-3">Atualizar</button>
+            <button routerLink = "/categoria"></button>
+        </div>
+    </div>
+
+
+
+
+
+</div>

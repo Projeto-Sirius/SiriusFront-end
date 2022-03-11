@@ -27,7 +27,7 @@ export class CategoriaService {
 
   }
   getByIdCategoria(id: number):Observable<Categoria>{
-    return this.http.get<Categoria>(`http://localhost:8080/tema/${id}`)
+    return this.http.get<Categoria>(`http://localhost:8080/categoria/${id}`)
 
   }
   postTema(categoria: Categoria):Observable<Categoria>{
