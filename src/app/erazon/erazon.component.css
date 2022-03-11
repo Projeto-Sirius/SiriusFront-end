@@ -1,0 +1,26 @@
+.fundo{
+    background-color:cadetblue;
+    padding:0%;
+}
+
+.fundoAzulClaro{
+   background-color: #DAFEFFD7;
+}
+
+.container-alt{
+    display: flex;
+    align-items: center;
+}
+.parceria{
+    width: 50%;
+    text-align: justify;
+    margin-left:17%;
+}
+
+.w70{
+    width: 60%;
+}
+
+.w30{
+    width: 40%;
+}
