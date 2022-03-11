@@ -16,3 +16,18 @@
 .bg-color{
     background-color: rgb(31, 61, 255);
 }
+
+.fs{
+    font-weight:700;
+    font-style: normal;
+    text-align: center;
+}
+
+.card-img-top{
+    width: 300px;
+    height: 300px;
+}
+.card{
+
+    width: 25%;
+}
