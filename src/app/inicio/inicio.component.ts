@@ -24,7 +24,12 @@ export class InicioComponent implements OnInit {
     private route: ActivatedRoute,
   ) { }
 
-  ngOnInit(){
+  ngOnInit(
+
+    
+  ){
+
+   
 
     if(environment.token == ''){
       
@@ -48,6 +53,13 @@ export class InicioComponent implements OnInit {
     this.produtoService.getAllProduto().subscribe((resp:Produto[])=>{
       this.listaProdutos = resp
     })
+  }
+  sair(){
+    this.router.navigate(['/entrar'])
+    environment.token = ''
+    environment.foto = ''
+    environment.nomeCompleto = ''
+    environment.id = 0
   }
 
   

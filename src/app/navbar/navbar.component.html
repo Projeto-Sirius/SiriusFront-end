@@ -18,75 +18,21 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="/inicio">HOME <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">PERFUMARIA</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-          CORPO E BANHO
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">CUIDADOS COM O CORPO</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">CUIDADOS PARA O BANHO</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">LINHA DE PROTETORES SOLAR</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-            MAKE
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">PELE</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">OLHOS</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">BOCA</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-            CABELO
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">PRODUTOS PARA CABELO</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">TIPOS DE CABELO</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-            KITS
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">CORPO</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">FACE</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">CABELO</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">PROMOÇÕES</a>
-        </li>
     </ul>
     <ul class="nav justify-content-end">
+      
       <li class="nav-item active">
-        <a class="nav-link" href="#">LOGIN <span class="sr-only"></span></a>
+        <a class="nav-link" routerLink="/erazon"> Erazon <span class="sr-only"></span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">FAVORITOS <span class="sr-only"></span></a>
+        <a class="nav-link" routerLink = '/produto' href="#">Produtos <span class="sr-only"></span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">SACOLA <span class="sr-only"></span></a>
+        <a class="nav-link" (click)="sair()" href="#">LOGIN <span class="sr-only"></span></a>
       </li>
+      
     </ul> 
   </div>
 </nav>

@@ -12,7 +12,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import { InicioComponent } from './inicio/inicio.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { CategoriaComponent } from './categoria/categoria.component';
@@ -20,6 +19,8 @@ import { ProdutosDeleteComponent } from './delete/produtos-delete/produtos-delet
 import { ProdutosEditComponent } from './edit/produtos-edit/produtos-edit.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { DetalhesProdutoComponent } from './detalhes-produto/detalhes-produto.component';
+import { ProdutoFixComponent } from './produto-fix/produto-fix.component';
+
 
 
 
@@ -38,9 +39,8 @@ import { DetalhesProdutoComponent } from './detalhes-produto/detalhes-produto.co
     ProdutosDeleteComponent,
     ProdutosEditComponent,
     ProdutoComponent,
-    DetalhesProdutoComponent
-
-    
+    DetalhesProdutoComponent,
+    ProdutoFixComponent
   ],
   imports: [
     BrowserModule,

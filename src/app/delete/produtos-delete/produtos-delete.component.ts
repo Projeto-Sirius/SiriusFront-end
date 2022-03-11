@@ -15,7 +15,7 @@ export class ProdutosDeleteComponent implements OnInit {
   idProduto:number
   constructor(
     private router:Router,
-    private temaService:ProdutoService,
+    private produtoService:ProdutoService,
     private route: ActivatedRoute
   ) { }
 
@@ -24,17 +24,17 @@ export class ProdutosDeleteComponent implements OnInit {
     this.router.navigate(['/entrar'])
 
     this.idProduto = this.route.snapshot.params['id']
-    this.findByIdTema(this.idProduto)
+    this.findByIdProduto(this.idProduto)
   } 
 
-  findByIdTema(id:number){
-    this.temaService.getByIdProduto(id).subscribe((resp:Produto)=>{
+  findByIdProduto(id:number){
+    this.produtoService.getByIdProduto(id).subscribe((resp:Produto)=>{
       this.produto = resp
   })
   }
 
   apagar(){
-    this.temaService.deleteProduto(this.idProduto).subscribe(() =>{
+    this.produtoService.deleteProduto(this.idProduto).subscribe(() =>{
       alert('Produto apagado com sucesso !')
       this.router.navigate(['/produto'])
     })

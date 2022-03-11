@@ -30,9 +30,8 @@ body{
     height: 440px;
     width: 200%;
     transition: height 0.2s ease;
+
 }
-
-
 .container .form{
     width: 50%;
     padding: 30px;
@@ -40,10 +39,9 @@ body{
     transition: margin-left 0.18s ease;
 }
 
-.container.active .login{
-    margin-left: -50%;
-    opacity: 0;
-    transition: margin-left 0.18s ease, opacity 0.15s ease;
+.social_icon span:hover{
+color: rgb(54, 54, 54);
+cursor: pointer;
 }
 
 .container .signup{
