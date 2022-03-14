@@ -1,28 +1,139 @@
 <div class="container-fluid">
-    <div class="row bg-color d-flex align-items-center">
-        <div class="col-md-6">
 
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-6 text-white">
-                    <h1 class='fs-54'>Seja bem vindo(a)!</h1>
-                    <h5 class='fs-18'>Veja ou adicione produtos</h5>
-                </div>
-            </div>
+    <div class="row bg-inicio align-items-center">
+        <div class="col-md-8">
 
-            <div class="row d-flex justify-content-center mt-3 mb-5">
-                <div class="col-md-6">
-                    <button class="btn btn-light mr-2" data-toggle="modal"routerLink = "/categoria" data-target="#novaPostagem">Novo
-                        Produto</button>
-                    <a class="btn btn-outline-light" routerLink='/produto-flix' href="#postagens">Ver Produtos</a>
+            <div class="row d-flex ">
+                <div class="col-md-6 txt text-bv">
+                    <h1 class="fs-50 txt-s"> ✨ Sirius ✨ !</h1>
+                    <h5 class="fs-24 txt-s">Use energia limpa, o planeta agradeçe !</h5>
                 </div>
             </div>
 
         </div>
 
-        
+        <div class="row ">
+            <div class="col-md-12 d-flex  ">
+
+                <div class=" d-flex">
+                    <button class="btn btn-1" data-toggle="modal" data-target="#novoProduto">Novo Produto</button>
+                    <a class="btn btn-outline btn-2"  routerLink = ""href="#produtos">Ver Produtos</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
     </div>
 
+
+
+
 </div>
+
+
+<div class="container md-5 mt-2" id="produtos">
+
+    <nav>
+        <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
+            <button class="nav-link active navs-tabs" id="nav-todasPostagens-tab" data-bs-toggle="tab"
+                href="#todosProdutos" type="button" role="tab" aria-controls="nav-todasPostagens"
+                aria-selected="true">Todas as postagens</button>
+
+            <button class="nav-link navs-tabs" id="nav-minhasPostagens-tab" data-bs-toggle="tab" href="#meusProdutos"
+                type="button" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas
+                postagens</button>
+
+            <button class="nav-link navs-tabs" id="nav-temasPostagens-tab" data-bs-toggle="tab"
+                href="#categoriaProdutos" type="button" role="tab" aria-controls="nav-temasPostagens"
+                aria-selected="false">Postagens por tema</button>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+
+        <div class="tab-pane fade show active" id="todosProdutos" role="tabpanel" aria-labelledby="nav-todosProdutos">
+            Todas as postagens</div>
+
+        <div class="tab-pane fade" id="meusProdutos" role="tabpanel" aria-labelledby="nav-meusProdutos"> Compartilhe
+            seus produtos! </div>
+
+        <div class="tab-pane fade" id="categoriaProdutos" role="tabpanel" aria-labelledby="nav-categoriaProdutos">
+            Categorias de Postagens! </div>
+
+    </div>
+
+
+
+    <div class="modal fade" id="novoProdutos" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TituloModalCentralizado">Novo Produto</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+
+                    <div class="form-group">
+                        <label for="titulo">Nome</label>
+                        <input [(ngModel)]='produto.nome' type="text" class="form-control" id="titulo" name="nome"
+                            placeholder="Titulo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="texto">Preco</label>
+                        <input [(ngModel)]='produto.preco' type="text" class="form-control" id="preco" name="preco"
+                            placeholder="Digite o Preço">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="texto">Quantidade</label>
+                        <input [(ngModel)]='produto.quantidade' type="text" class="form-control" id="quantidade"
+                            name="quantidade" placeholder="Digite a Quantidade">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="texto">Foto</label>
+                        <input [(ngModel)]='produto.foto' type="text" class="form-control" id="fotos" name="fotos"
+                            placeholder="Link da foto">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="texto">Escolha uma Categoria</label>
+                        <select name="categoria" id="categoria" class="form-control" [(ngModel)]='idCategoria'
+                            (change)='findByIdCategoria()'>
+                            <option *ngFor='let item of listaCategoria' value="{{item.id}}">{{item.nome}}</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="texto">Escolha um Produto ou <a routerLink="/produto-fix">cadastre um novo
+                            </a></label>
+                        <select name="produto" id="produto" class="form-control" [(ngModel)]='idProduto'
+                            (change)='findByIdProdutos()'>
+                            <option *ngFor='let item of listaProdutos' value="{{item.id}}">{{item.nome}}</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">Cancelar</button>
+                    <button type="button" class="btn btn-success" (click)='publicar()'>Publicar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
 
 
 
@@ -36,22 +147,26 @@
         <div class="div d-flex justify-content-center mb-3">
             <h2 class=fs2>Todos os Produtos</h2>
         </div>
-        
-    </div>
-    
-    <div class = "col-md 12 d-flex flex-wrap">
 
-    
-    <div *ngFor = "let contador of listaProdutos">
-    <div class="card" style="width: 20rem;">
-        <img class="card-img-top" src="{{contador.foto}}" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">{{contador.nome}} </h5>
-          <p class="card-text">R$ {{contador.preco}}</p>
-          <a href="#" [routerLink] = "['/produtos-edit',contador.id]" class="btn btn-primary">Editar</a>
-          <a href="#" [routerLink] = "['/produtos-delete',contador.id]" class="btn btn-danger">Apagar</a>
-        </div>
-      </div>
     </div>
+
+    <div class="col-md 12 d-flex flex-wrap">
+
+
+        <div *ngFor="let contador of listaProdutos">
+            <div class="card d-flex ml-3">
+                <img class="card-img-top" width="200px" height="200px" src="{{contador.foto}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title fs-18">{{contador.nome}} </h5>
+                    <p class="card-text">R$ {{contador.preco}}</p>
+                    <div class="d-flex justify-content-center">
+                        <a href="#" [routerLink]="['/produtos-edit',contador.id]" class="btn btn-primary "
+                            style="margin-right: 1em ;">Editar</a>
+                        <a href="#" [routerLink]="['/produtos-delete',contador.id]" class="btn btn-danger">Apagar</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
 </div>

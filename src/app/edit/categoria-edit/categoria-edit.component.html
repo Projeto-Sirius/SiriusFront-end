@@ -1,1 +1,41 @@
-<p>categoria-edit works!</p>
+<div class="container mt-5 mb-5">
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center text-secondary">Atualizar</h1>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input [(ngModel)]='categoria.nome' class="form-control" type="text" name="nome"
+                    placeholder="Digite o nome">
+            </div>
+            <div class="form-group">
+                <label for="usuario">Descricao</label>
+                <input [(ngModel)]='categoria.descricao' class="form-control" type="text" name="descricao"
+                    placeholder="descricao">
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <div class="d-flex justify-content-center ">
+        <button type="submit" routerLink="/categoria" class="btn btn-danger">Cancelar</button>
+        <button (click)='atualizar()' type="submit" class="btn btn-success ml-3">Atualizar</button>
+    </div>
+</div>
+
+
+
+
+

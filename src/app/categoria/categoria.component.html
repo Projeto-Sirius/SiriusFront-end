@@ -1,55 +1,63 @@
 <div class="container">
             
             
-                <div class="form-group">
+    <div class="form-group">
 
-                    <div class="form-group">
-                        <label for="titulo">Nome</label>
-                        <input [(ngModel)]='produto.nome' type="text" class="form-control" id="titulo" name="nome"
-                            placeholder="Titulo">
-                    </div>
+        <div class="form-group">
+            <label for="titulo">Nome</label>
+            <input [(ngModel)]='categoria.nome' type="text" class="form-control" id="titulo" name="nome"
+                placeholder="Titulo">
+        </div>
 
-                    <div class="form-group">
-                        <label for="texto">Preco</label>
-                        <input [(ngModel)]='produto.preco' type="text" class="form-control" id="preco" name="preco"
-                            placeholder="Digite o Preço">
-                    </div>
+        <div class="form-group">
+            <label for="texto">Descrição</label>
+            <input [(ngModel)]='categoria.descricao' type="text" class="form-control" id="descricao" name="descricao"
+                placeholder="Digite o Preço">
+        </div>
 
-                    <div class="form-group">
-                        <label for="texto">Quantidade</label>
-                        <input [(ngModel)]='produto.quantidade' type="text" class="form-control" id="quantidade"
-                            name="quantidade" placeholder="Digite a Quantidade">
-                    </div>
+    </div>
 
-                    <div class="form-group">
-                        <label for="texto">Foto</label>
-                        <input [(ngModel)]='produto.foto' type="text" class="form-control" id="fotos" name="fotos"
-                            placeholder="Link da foto">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="texto">Escolha uma Categoria</label>
-                        <select name="categoria" id="categoria" class="form-control" [(ngModel)]='idCategoria'
-                            (change)='findByIdCategoria()'>
-                            <option *ngFor='let item of listaCategoria' value="{{item.id}}">{{item.nome}}</option>
-                        </select>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label for="texto">Escolha um Produto ou <a 
-                                routerLink="/produto-fix">cadastre um novo </a></label>
-                        <select name="produto" id="produto" class="form-control" [(ngModel)]='idProduto'
-                            (change)='findByIdProdutos()'>
-                            <option *ngFor='let item of listaProdutos' value="{{item.id}}">{{item.nome}}</option>
-                        </select>
-                    </div>
-
-                </div>
-            
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" >Cancelar</button>
-                <button type="button" class="btn btn-success" (click)='publicar()'>Publicar</button>
-            </div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-danger" >Cancelar</button>
+    <button type="button" class="btn btn-success" (click)='publicar()'>Publicar</button>
 </div>
+</div>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h2 class="text-center">Todas as Categorias</h2>
+        </div>
+    </div>
+    <div class="row mt-3 mb-5 d-flex justify-content-center">
+        <div class="col-md-6">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Descrição</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of listaCategoria"> 
+                    <th>{{item.id}}</th>
+                    <td>{{item.nome}}</td>
+                    <td>{{item.descricao}}</td>
+                    <td class="d-flex justify-content-end">
+                        <button class="btn btn-edit mr-3" [routerLink]="['/categoria-edit', item.id]">Editar</button>
+                        <button class="btn btn-delete" [routerLink]="['/categoria-delete', item.id]">Apagar</button>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
   

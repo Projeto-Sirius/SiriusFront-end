@@ -23,11 +23,116 @@
     text-align: center;
 }
 
-.card-img-top{
-    width: 300px;
-    height: 300px;
-}
+
 .card{
 
-    width: 25%;
+    
+    width: 20rem !important;
+
+
 }
+
+.bg-inicio {
+    background-image: url("https://i.imgur.com/oKMiF4U.png");
+    min-height: 652px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    opacity: 0, 2;
+}
+
+
+.text-bv {
+    color: #ffffff!important;
+}
+
+.fs-50 {
+    font-size: 70pt;
+}
+
+.fs-24 {
+    font-size: 28pt!important;
+}
+.txt-s{
+    text-shadow: 5px 2px 2px black;
+}
+.btn-1 {
+    font-family: 'VT323', monospace;
+    font-size: 15pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    text-align: center;
+    line-height: 30px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: dodgerblue;
+    margin-right: 1.2em;
+    box-shadow: 10px 5px 5px black;
+}
+
+.btn-2 {
+    font-family: 'VT323', monospace;
+    font-size: 15pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    text-align: center;
+    line-height: 30px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: dodgerblue;
+    box-shadow: 5px 5px 3px black;
+}
+
+
+.navs-tabs {
+    font-family: 'VT323', monospace;
+    color: #4ce5f5;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.modal-bg {
+    box-shadow: 20px 20px 58px rgba(82, 61, 131, 0.25);
+    border-top: 1px solid rgba(82, 61, 131, 0.5);
+    border-right: 1px solid rgba(82, 61, 131, 0.5);
+    backdrop-filter: blur(8px);
+}
+
+.btn-confirm {
+    font-size: 15pt;
+}
+
+.btn-cancel {
+    font-size: 15pt;
+}
+
+.modal-title {
+    font-size: 35pt;
+    color: aliceblue;
+    font-weight: bold;
+    text-shadow: 3px 3px black;
+}
+
+.form-group {
+    font-size: 20pt;
+    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
+}
+
+.cadastro-tema {
+    text-decoration: none;
+    color: #4ce4f5;
+}
+
+.btn-confirm:hover {
+    background-color: #4ce5f5c0;
+    color: black;
+}
+
+

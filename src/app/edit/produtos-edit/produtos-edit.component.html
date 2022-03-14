@@ -1,3 +1,5 @@
+
+<body>
 <div class="container mt-5 mb-5">
 
 
@@ -29,12 +31,17 @@
                 <input [(ngModel)]='produto.quantidade' class = "form-control" type = "text" name = "quantidade"
                  placeholder = "Digite a quantidade">
             </div>
+            <div class="form-group">
+                <label for="texto">Escolha uma Categoria ou <a data-dismiss = "modal" routerLink = "/categoria">cadastre uma nova</a></label>
+                <select name="categoria" id="categoria" class="form-control" [(ngModel)] = 'idCategoria' (change) = 'findByIdCategoria()'>
+                    <option *ngFor ='let item of listaCategoria'value="{{item.id}}">{{item.nome}}</option>
+                </select>
+            </div>
         </div>
 
         <div class = "d-flex justify-content-center ">
             <button type = "submit" routerLink = "/produto" class = "btn btn-danger">Cancelar</button>
             <button (click) = 'atualizar()'type = "submit" class = "btn btn-success ml-3">Atualizar</button>
-            <button routerLink = "/categoria"></button>
         </div>
     </div>
 
@@ -43,3 +50,4 @@
 
 
 </div>
+</body>

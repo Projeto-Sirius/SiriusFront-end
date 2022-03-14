@@ -10,6 +10,7 @@ import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
 
+
 @Component({
   selector: 'app-categoria',
   templateUrl: './categoria.component.html',
@@ -44,7 +45,7 @@ export class CategoriaComponent implements OnInit {
       
     }
     
-    this.getAllProdutos()
+    this.findAllCategorias()
   }
 
 
@@ -52,6 +53,12 @@ export class CategoriaComponent implements OnInit {
 
     this.produtoService.getAllProduto().subscribe((resp:Produto[])=>{
       this.listaProdutos = resp
+    })
+  }
+
+  findAllCategorias(){
+    this.categoriaService.getAllCategoria().subscribe((resp:Categoria[])=>{
+      this.listaCategoria = resp
     })
   }
 
@@ -76,18 +83,14 @@ export class CategoriaComponent implements OnInit {
     })
   }
   publicar(){
-
-    this.categoria.id = this.idCategoria
-    this.produto.categoria = this.categoria
-
-    this.produto.id = this.idUser
-    this.produto.usuario = this.user
-
-    this.produtoService.postProduto(this.produto).subscribe((resp:Produto) =>{
-    this.produto = resp
-    alert('Postagem realizada com sucesso!')})
-
-    this.getAllProdutos()
-    
+    this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria)=>{
+      this.categoria = resp
+      
+      this.findAllCategorias()
+      this.categoria = new Categoria()
+    })
   }
+
+
+
 }

@@ -27,7 +27,9 @@ const routes: Routes = [
 {path:'produto',component:ProdutoComponent},
 {path:'produto-flix',component:ProdutoFixComponent},
 {path:'categoria',component:CategoriaComponent},
-{path:'erazon',component:ErazonComponent}
+{path:'erazon',component:ErazonComponent},
+{path:'categoria-edit/:id',component:CategoriaEditComponent},
+{path:'categoria-delete/:id',component:CategoriaDeleteComponent}
 
 ];
 
