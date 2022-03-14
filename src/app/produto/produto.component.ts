@@ -42,8 +42,15 @@ export class ProdutoComponent implements OnInit {
     }
     
     this.getAllProdutos()
+    this.findAllCategoria()
   }
 
+  findAllCategoria(){
+
+    this.categoriaService.getAllCategoria().subscribe((resp:Categoria[])=>{
+      this.listaCategoria = resp
+    })
+  }
 
   findAllProdutos(){
 
@@ -77,7 +84,7 @@ export class ProdutoComponent implements OnInit {
     this.categoria.id = this.idCategoria
     this.produto.categoria = this.categoria
 
-    this.produto.id = this.idUser
+    this.user.id = this.idUser
     this.produto.usuario = this.user
 
     this.produtoService.postProduto(this.produto).subscribe((resp:Produto) =>{
