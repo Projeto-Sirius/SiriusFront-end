@@ -6,6 +6,6 @@ export class Usuario{
     public senha:string
     public foto:string
     public usuario:string
-    public produto:Produto
+    public produto:Produto[]
 
 }
