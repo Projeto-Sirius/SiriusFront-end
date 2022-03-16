@@ -25,6 +25,8 @@ export class ProdutoFixComponent implements OnInit {
     this.produtoService.getAllProduto().subscribe((resp:Produto[])=>{
       this.listaProdutos = resp
     })
+
+
   }
 
 }

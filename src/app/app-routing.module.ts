@@ -23,7 +23,7 @@ const routes: Routes = [
 {path:'tema-delete/:id',component:CategoriaDeleteComponent},
 {path:'produtos-edit/:id',component:ProdutosEditComponent},
 {path:'produtos-delete/:id',component:ProdutosDeleteComponent},
-{path: 'detalhes-produto', component:DetalhesProdutoComponent},
+{path: 'detalhes-produto/:id', component:DetalhesProdutoComponent},
 {path:'produto',component:ProdutoComponent},
 {path:'produto-flix',component:ProdutoFixComponent},
 {path:'categoria',component:CategoriaComponent},
