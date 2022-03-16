@@ -108,13 +108,14 @@
                             (change)='findByIdCategoria()'>
                             <option *ngFor='let item of listaCategoria' value="{{item.id}}">{{item.nome}}</option>
                         </select>
+                        <p routerLink = "/categoria" data-bs-dismiss="modal">Crie sua propria categoria</p>
                     </div>
 
 
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger">Cancelar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" >Cancelar</button>
                     <button type="button" class="btn btn-success" (click)='publicar()'>Publicar</button>
                 </div>
             </div>
