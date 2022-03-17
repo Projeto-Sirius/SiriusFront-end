@@ -31,8 +31,18 @@ export class DetalhesProdutoComponent implements OnInit {
     this.produtoService.getByIdProduto(id).subscribe((resp:Produto)=>{
       this.produto = resp
   })
+
+}
+  
+  comprar(){
+
+    alert('compra realizada com sucesso')
+
+  }
+
+  
   }
 
   
 
-}
+

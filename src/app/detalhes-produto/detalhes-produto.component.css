@@ -1,0 +1,53 @@
+.img-responsive{
+    height: 300px;
+    width: 100%;
+}
+
+.borda{
+    border-style: groove;
+    border-radius: 8px;
+}
+
+.tamanho-icone{
+    width: 5rem;
+    height: auto;
+}
+
+.botao{
+    width: 50%;
+}
+
+ul.social-network {
+    list-style: none;
+    padding: 0;
+    
+}
+
+
+ul.social-network li {
+    display: inline;
+    margin: 0;
+    padding: 3px;
+}
+
+.fa {
+    font-size: 35pt;
+    padding: 10px;
+    color: black;
+}
+
+.fa-linkedin-square:hover {
+    color: #0e76a8;
+}
+
+.fa-github:hover {
+    color: blueviolet;
+}
+
+.fa-instagram:hover{
+    color: #b6299e;
+}
+
+.background{
+    background-color:#5dccd4; 
+}
