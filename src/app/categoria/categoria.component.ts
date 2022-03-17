@@ -5,6 +5,7 @@ import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 
 import { User } from '../model/User';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
@@ -33,14 +34,15 @@ export class CategoriaComponent implements OnInit {
     
     private produtoService:ProdutoService,
     private categoriaService: CategoriaService,
-    private authService:AuthService
+    private authService:AuthService,
+    private alertas:AlertasService
     ) { }
 
   ngOnInit(){
     window.scroll(0,0)
     if(environment.token == ''){
       
-      alert('Sua seção expirou,faça o login novamente')
+      this.alertas.showAlertInfo('Sua seção expirou,faça o login novamente')
       this.router.navigate(['/entrar'])
       
     }

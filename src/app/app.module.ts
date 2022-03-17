@@ -20,6 +20,8 @@ import { ProdutosEditComponent } from './edit/produtos-edit/produtos-edit.compon
 import { ProdutoComponent } from './produto/produto.component';
 import { DetalhesProdutoComponent } from './detalhes-produto/detalhes-produto.component';
 import { ProdutoFixComponent } from './produto-fix/produto-fix.component';
+import { AlertaComponent } from './alerta/alerta.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 
@@ -40,14 +42,17 @@ import { ProdutoFixComponent } from './produto-fix/produto-fix.component';
     ProdutosEditComponent,
     ProdutoComponent,
     DetalhesProdutoComponent,
-    ProdutoFixComponent
+    ProdutoFixComponent,
+    AlertaComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers: [{
     provide:LocationStrategy,

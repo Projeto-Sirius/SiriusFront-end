@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
+import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
@@ -22,6 +23,7 @@ export class InicioComponent implements OnInit {
 
     private router:Router,
     private route: ActivatedRoute,
+    private alertas:AlertasService
   ) { }
 
   ngOnInit(
@@ -33,7 +35,7 @@ export class InicioComponent implements OnInit {
 
     if(environment.token == ''){
       
-      alert('Sua seção expirou,faça o login novamente')
+      this.alertas.showAlertInfo('Sua seção expirou,faça o login novamente')
       this.router.navigate(['/entrar'])
       
     }
