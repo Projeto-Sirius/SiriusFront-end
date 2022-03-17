@@ -14,16 +14,19 @@
         </div>
 
         <div class="row ">
-            <div class="card ">
-                <div height="10px">
-                    <img class="card-img-top img-tmh " src="https://images.tcdn.com.br/img/img_prod/652644/coletor_solar_black_tech_381_1_5dddb2d5edf2a9e63a9f35c712abb89d.jpg" alt="Imagem de capa do card">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Coletor Solar BLACK TECH 200 x 100 </h5>
-                    <p class="card-text">Preço:R$2600,00 </p>
-                    <a href="#" [routerLink]="" class="btn btn-primary">Conferir</a>
+            <div *ngFor = "let item of listaProdutos"> 
+                <div class="card ">
+                    <div height="10px">
+                        <img class="card-img-top img-tmh " src="{{item.foto}}">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.nome}}</h5>
+                        <p class="card-text">Preço: R$ {{item.preco}}</p>
+                    <a [routerLink]="['/detalhes-produto',item.id ]"  class="btn btn-primary">Conferir</a>
+                    </div>
                 </div>
             </div>
+           
         </div>
     
     

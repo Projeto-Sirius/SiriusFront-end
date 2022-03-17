@@ -1,1 +1,160 @@
-<p>detalhes-produto works!</p>
+<nav class="navbar navbar-expand-lg navbar-light background ">
+    <a class="navbar-brand" href="#"><img  class = "siriuslogo"></a>
+    <div class="container-fluid">
+  
+   
+    <div class="col-md-11">
+      <div class="d-flex justify-content-end collapse navbar-collapse" id="navbarSupportedContent ml">
+        <form class="form-inline d-flex ">
+          <input class="form-control mr-sm-2 " type="search" placeholder="Digite aqui" aria-label="Search">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>
+      </div>
+    </div>
+    </div>
+
+    
+  </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/inicio">HOME <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <ul class="nav justify-content-end">
+        
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/erazon"> Erazon <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink = '/produto' href="#">Produtos <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link"  href="#">LOGIN <span class="sr-only"></span></a>
+        </li>
+        
+      </ul> 
+    </div>
+  </nav>
+
+
+
+<div class="container" style="background-color:white">
+    <div class="row">
+        <div class="col-md-7 my-5">
+
+            <div class="card" style="width: 25rem;">
+                <img src="{{produto.foto}}" class="img-responsive borda" alt="">
+                <p>{{produto.nome}}</p>
+                <div class="card-body">
+                    <p>{{produto.preco}} R$</p>
+                    <button class="btn btn-success mb-3" (click)='comprar()'>Comprar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <h1>Formas de pagamento :</h1>
+            <div class="row mx-3">
+                <h5>
+                    <p><img src="https://imgur.com/OQLQ6zp.png" alt="" class="tamanho-icone"> Cartão de crédito</p>
+                </h5>
+
+                <h5>
+                    <p><img src="https://imgur.com/1KLJr8U.png" alt="" class="tamanho-icone mx-3">Boleto</p>
+                </h5>
+
+                <h5>
+                    <p> <img src="https://imgur.com/C5ybb3A.png" alt="" class="tamanho-icone">PIX</p>
+                </h5>
+
+
+            </div>
+
+            <div class="row">
+                <form class="form-inline">
+                    <div class="form-group mb-2">
+                        <input type="text" readonly class="form-control-plaintext" id="staticEmail2">
+                        <label class="ml-3" for="">Consultar prazo e valor do frete</label>
+                    </div>
+                    <div class="form-group mx-sm-0  mb-3">
+                        <label for="inputPassword2" class="sr-only">CEP</label>
+                        <input type="text" class="form-control" id="inputPassword2" placeholder="00000-000">
+                    </div>
+                    <button type="submit" class="btn btn-success mb-2" >OK</button>
+                </form>
+            </div>
+
+            
+            
+
+        </div>
+    </div>
+</div>
+
+        
+        
+
+    <div class="container-fluid">
+    
+        <footer class="page-footer font-small background pt-4">
+
+           
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <h4 class="text-white"> 🌟Siga-nos nas redes sociais! 🌟</h4>
+                    </div>
+                </div>
+    
+                <div class="col-md-12 d-flex justify-content-center">
+    
+                    <ul class="social-network">
+                        <li>
+                            <a href="" target="_blank" class="icoLinkedin">
+    
+                                <i style = "color:white"class="fa fa-linkedin-square"></i>
+    
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Projeto-Sirius" target="_blank" class="icoGithub">
+    
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/projeto_sirius30" target="_blank" class="icoInstagram"><i style = "color:white" class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li> 
+    
+                        
+    
+                    </ul>
+    
+                </div>
+    
+    
+    
+            
+            
+    
+            <div class="footer-copyright text-center py-3 " style="background-color: rgba(0, 0, 0, 0.8); color: #FFF;">
+                © 2022 Copyright:
+                <a class="text-copyright" style="color: #FFF;" href="https://github.com/Projeto-Sirius%22%3E Projeto Sirius LTDA"> Sirius LTDA</a>
+            </div>
+    
+        
+        
+        
+    
+    
+        </footer>
+    
+          
+                    
+               
+
+                    
+
+                    
+                        
