@@ -20,6 +20,7 @@ export class ProdutosDeleteComponent implements OnInit {
     private route: ActivatedRoute,
     private alertas:AlertasService
   ) { }
+  
 
   ngOnInit(){
     if(environment.token='')

@@ -9,8 +9,9 @@
 }
 
 .tamanho-icone{
-    width: 5rem;
+    width: 3rem;
     height: auto;
+    
 }
 
 .botao{
@@ -50,4 +51,7 @@ ul.social-network li {
 
 .background{
     background-color:#5dccd4; 
+}
+.fs-20{
+    font-size: 20px;
 }

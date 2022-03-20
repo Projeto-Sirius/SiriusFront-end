@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Produto } from '../model/Produto';
+import { AlertasService } from '../service/alertas.service';
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
@@ -16,7 +17,8 @@ export class DetalhesProdutoComponent implements OnInit {
   constructor(
     private router:Router,
     private produtoService:ProdutoService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alertas:AlertasService
   ) { }
 
   ngOnInit(){
@@ -36,7 +38,7 @@ export class DetalhesProdutoComponent implements OnInit {
   
   comprar(){
 
-    alert('compra realizada com sucesso')
+    this.alertas.showAlertSucess('compra realizada com sucesso')
 
   }
 
