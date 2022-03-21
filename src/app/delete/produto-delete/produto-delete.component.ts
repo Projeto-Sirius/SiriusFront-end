@@ -5,14 +5,15 @@ import { AlertasService } from 'src/app/service/alertas.service';
 import { ProdutoService } from 'src/app/service/produto.service';
 import { environment } from 'src/environments/environment.prod';
 
-@Component({
-  selector: 'app-produtos-delete',
-  templateUrl: './produtos-delete.component.html',
-  styleUrls: ['./produtos-delete.component.css']
-})
-export class ProdutosDeleteComponent implements OnInit {
 
-  produto: Produto = new Produto()
+@Component({
+  selector: 'app-produto-delete',
+  templateUrl: './produto-delete.component.html',
+  styleUrls: ['./produto-delete.component.css']
+})
+export class ProdutoDeleteComponent implements OnInit {
+
+  produto:Produto = new Produto()
   idProduto:number
   constructor(
     private router:Router,
