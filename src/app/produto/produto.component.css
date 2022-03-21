@@ -114,14 +114,14 @@
 
 .modal-title {
     font-size: 35pt;
-    color: aliceblue;
+    color: black;
     font-weight: bold;
-    text-shadow: 3px 3px black;
+  
 }
 
 .form-group {
-    font-size: 20pt;
-    text-shadow: 2px 2px 2px black;
+    font-size: 12pt;
+    text-shadow: 2px 2px 2px white;
     font-weight: bold;
 }
 
@@ -134,5 +134,4 @@
     background-color: #4ce5f5c0;
     color: black;
 }
-
 
