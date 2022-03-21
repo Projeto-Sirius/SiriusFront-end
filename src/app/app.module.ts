@@ -22,7 +22,6 @@ import { DetalhesProdutoComponent } from './detalhes-produto/detalhes-produto.co
 import { ProdutoFixComponent } from './produto-fix/produto-fix.component';
 import { AlertaComponent } from './alerta/alerta.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 
 
 
@@ -45,7 +44,6 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
     DetalhesProdutoComponent,
     ProdutoFixComponent,
     AlertaComponent,
-    ProdutoDeleteComponent,
 
   ],
   imports: [

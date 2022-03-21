@@ -1,0 +1,139 @@
+<div class="container-fluid">
+
+    <div class="row bg-inicio align-items-center">
+        <div class="col-md-8">
+
+            <div class="row d-flex ">
+                <div class="col-md-6 txt text-bv">
+                    <h1 class="fs-50 txt-s"> ✨ Sirius ✨ !</h1>
+                    <h5 class="fs-24 txt-s">Use energia limpa, o planeta agradeçe !</h5>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row ">
+            <div class="col-md-12 d-flex  ">
+
+                <div class=" d-flex">
+                    <button class="btn btn-1" data-bs-toggle="modal" data-bs-target="#novoProdutos">Novo Produto</button>
+                    <a class="btn btn-outline btn-2"  routerLink = "/produto-flix">Ver Produtos</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+</div>
+
+
+<div class="container md-5 mt-2" id="produtos">
+
+    
+
+
+
+    <div class="modal fade" id="novoProdutos" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TituloModalCentralizado">Novo Produto</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+
+                    <div class="form-group">
+                        <label for="titulo">Nome</label>
+                        <input [(ngModel)]='produto.nome' type="text" class="form-control" id="titulo" name="nome"
+                            placeholder="Titulo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="texto">Preco</label>
+                        <input [(ngModel)]='produto.preco' type="text" class="form-control" id="preco" name="preco"
+                            placeholder="Digite o Preço">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="texto">Quantidade</label>
+                        <input [(ngModel)]='produto.quantidade' type="text" class="form-control" id="quantidade"
+                            name="quantidade" placeholder="Digite a Quantidade">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="texto">Foto</label>
+                        <input [(ngModel)]='produto.foto' type="text" class="form-control" id="fotos" name="fotos"
+                            placeholder="Link da foto">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="texto">Escolha uma Categoria</label>
+                        <select name="categoria" id="categoria" class="form-control" [(ngModel)]='idCategoria'
+                            (change)='findByIdCategoria()'>
+                            <option *ngFor='let item of listaCategoria' value="{{item.id}}">{{item.nome}}</option>
+                        </select>
+                        <p routerLink = "/categoria" data-bs-dismiss="modal">Crie sua propria categoria</p>
+                    </div>
+
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" >Cancelar</button>
+                    <button type="button" class="btn btn-success" (click)='publicar()'>Publicar</button>
+                    <p data-bs-dismiss="modal" routerLink = "/categoria"> Crie sua propria categoria</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="container  mt-5 mb-5">
+
+    <div>
+        <div class="div d-flex justify-content-center mb-3">
+            <h2 class=fs2>Todos os Produtos</h2>
+        </div>
+
+    </div>
+
+    <div class="col-md 12 d-flex flex-wrap">
+
+
+        <div *ngFor="let contador of listaProdutos">
+            <div class="card d-flex mt-5 mb-5  ">
+                <img class="card-img-top" width="20%" height="200px" src="{{contador.foto}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title fs-18">{{contador.nome}} </h5>
+                    <p class="card-text">R$ {{contador.preco}}</p>
+                    <div class="d-flex justify-content-center">
+                        <a href="#" [routerLink]="['/produtos-edit',contador.id]" class="btn btn-primary "
+                            style="margin-right: 1em ;">Editar</a>
+                        <a href="#" [routerLink]="['/produtos-delete',contador.id]" class="btn btn-danger">Apagar</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
