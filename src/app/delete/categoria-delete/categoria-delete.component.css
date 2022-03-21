@@ -1,8 +1,3 @@
-body{
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-
+#bg{
+    background-color:rgb(17, 118, 136)!important;
 }
