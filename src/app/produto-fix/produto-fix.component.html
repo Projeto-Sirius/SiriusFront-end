@@ -13,22 +13,25 @@
             </div>
         </div>
 
-        <div class="row ">
-            <div *ngFor = "let item of listaProdutos"> 
-                <div class="card ">
-                    <div height="10px">
-                        <img class="card-img-top img-tmh " src="{{item.foto}}">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">{{item.nome}}</h5>
-                        <p class="card-text">Preço: R$ {{item.preco}}</p>
-                    <a [routerLink]="['/detalhes-produto',item.id ]"  class="btn btn-primary">Conferir</a>
+        
+            <div class = "row">
+                <div *ngFor = "let item of listaProdutos" style = "display:inline-block; width: 20%;" >
+                    <div class="card col-md-4 mt-3 mb-3"  style="width: 100%; ">
+                        <div class="card-body">
+                            <div class="card-img-actions"> <img src="{{item.foto}}" class="card-img img-fluid" width="96" height="350" alt=""> </div>
+                        </div>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                <h6 class="font-weight-semibold mb-2"> <a href="#" class="text-default mb-2" data-abc="true">{{item.nome}}</a> </h6> <a href="#" class="text-muted" data-abc="true">{{item.categoria.nome}}</a>
+                            </div>
+                            <h3 class="mb-0 font-weight-semibold">R${{item.preco}}</h3>
+                            <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
+                            <div class="text-muted mb-3">34 reviews</div> <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2"></i> Conferir</button>
+                        </div>
                     </div>
                 </div>
             </div>
-           
-        </div>
-    
+            
     
     <div class="container"><hr></div>
 
