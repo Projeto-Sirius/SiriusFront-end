@@ -12,6 +12,8 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class CategoriaEditComponent implements OnInit {
   categoria:Categoria = new Categoria()
+
+  listaCategoria: Categoria [] 
   
   constructor(
   
@@ -27,15 +29,17 @@ export class CategoriaEditComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
     let id = this.route.snapshot.params['id']
-    this.findByIdTema(id)
+    this.findByIdCategoria(id)
   }
 
-  findByIdTema(id:number){
+  findByIdCategoria(id:number){
     this.categoriaService.getByIdCategoria(id).subscribe((resp: Categoria) =>{
       this.categoria = resp
     })
 
   }
+
+
 
   atualizar(){
     

@@ -42,7 +42,7 @@ export class CategoriaComponent implements OnInit {
     window.scroll(0,0)
     if(environment.token == ''){
       
-      this.alertas.showAlertInfo('Sua seção expirou,faça o login novamente')
+      this.alertas.showAlertInfo('Faça o login para acessar')
       this.router.navigate(['/entrar'])
       
     }

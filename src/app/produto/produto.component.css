@@ -33,11 +33,12 @@
 }
 
 .bg-inicio {
-    background-image: url("../../assets/logoPr.png");
+    background-image: url("https://media.discordapp.net/attachments/945324519034347520/950720571400925184/My_project_8.png");
+    background-size:cover;
     min-height: 440px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+   
     display: flex;
     align-items: center;
     opacity: 0, 2;
