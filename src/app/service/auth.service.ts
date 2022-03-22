@@ -18,11 +18,11 @@ export class AuthService {
 
 
   entrar(userLogin:UsuarioLogin): Observable<UsuarioLogin>{
-      return this.http.post<UsuarioLogin>('http://localhost:8080/usuarios/logar',userLogin)
+      return this.http.post<UsuarioLogin>('https://siriusprojetodb.herokuapp.com/usuarios/logar',userLogin)
   }
 
   cadastrar(User:User):Observable<User>{
-      return this.http.post<User>('http://localhost:8080/usuarios/cadastrar',User)
+      return this.http.post<User>('https://siriusprojetodb.herokuapp.com/usuarios/cadastrar',User)
   }
 
   
