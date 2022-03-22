@@ -33,7 +33,7 @@ export class ProdutosEditComponent implements OnInit {
   ngOnInit(){
 
     if(environment.token ==''){
-    this.router.navigate(['/produtos'])
+    this.router.navigate(['/entrar'])
 
     }
 
@@ -69,7 +69,7 @@ export class ProdutosEditComponent implements OnInit {
     this.produtoService.putProduto(this.produto).subscribe((resp:Produto)=>{
       this.produto = resp
       this.alertas.showAlertSucess('Produto atualizado com sucesso')
-      this.router.navigate(['/inicio'])
+      this.router.navigate(['/produto'])
 
     })
     

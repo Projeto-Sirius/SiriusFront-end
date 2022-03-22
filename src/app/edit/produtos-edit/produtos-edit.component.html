@@ -1,53 +1,58 @@
-
-<body>
-<div class="container mt-5 mb-5">
-
-
-    <div class = "row">
-        <div class = "col-md-12">
-            <h1 class = "text-center text-secondary">Atualizar</h1>
+<div class="container mb-5 mt-5 bg-black" id="bg">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center text-danger mt-3"> Atualizar Produto </h1>
         </div>
     </div>
 
-    <div class = "row d-flex justify-content-center">
-        <div class = "col-md-6">
-            <div class = "form-group">
-                <label for = "nome">Nome</label>
-                <input [(ngModel)]='produto.nome' class = "form-control" type = "text" name = "nome"
-                 placeholder = "Digite o nome">
-            </div>
-            <div class = "form-group">
-                <label for = "usuario">Foto</label>
-                <input [(ngModel)]='produto.foto'class = "form-control" type = "text" name = "foto"
-                 placeholder = "Link da foto">
-            </div>
-            <div class = "form-group">
-                <label for = "foto">Preco</label>
-                <input [(ngModel)]='produto.preco'class = "form-control" type = "text" name = "preco"
-                 placeholder = "Digite o preço">
-            </div>
-            <div class = "form-group">
-                <label for = "quantidade">Quantidade</label>
-                <input [(ngModel)]='produto.quantidade' class = "form-control" type = "text" name = "quantidade"
-                 placeholder = "Digite a quantidade">
-            </div>
-            <div class="form-group">
-                <label for="texto">Escolha uma Categoria ou <a data-dismiss = "modal" routerLink = "/categoria">cadastre uma nova</a></label>
-                <select name="categoria" id="categoria" class="form-control" [(ngModel)] = 'idCategoria' (change) = 'findByIdCategoria()'>
-                    <option *ngFor ='let item of listaCategoria'value="{{item.id}}">{{item.nome}}</option>
-                </select>
+    <div class="row d-flex justify-content-center mt-4">
+        <div class="col-md-4">
+            <div class="form text-center">
+                <div class = "form-group">
+                    <label for = "nome">Nome</label>
+                    <input [(ngModel)]='produto.nome' class = "form-control" type = "text" name = "nome"
+                     placeholder = "Digite o nome">
+                </div>
+                <div class="form-group">
+                    <label for="foto">Foto</label>
+                    <input [(ngModel)]='produto.foto' class="form-control" type="text" name="foto"
+                        placeholder="Link da foto">
+                </div>
+                <div class="form-group">
+                    <label for="preco">Preco</label>
+                    <input [(ngModel)]='produto.preco' class="form-control" type="text" name="preco"
+                        placeholder="Digite o preço">
+                </div>
+                <div class="form-group">
+                    <label for="quantidade">Quantidade</label>
+                    <input [(ngModel)]='produto.quantidade' class="form-control" type="text" name="quantidade"
+                        placeholder="Digite a quantidade">
+                </div>
+                <div class="form-group">
+                    <label for="texto">Escolha uma Categoria ou <a data-dismiss="modal"
+                            routerLink="/categoria">cadastre uma nova</a></label>
+                    <select name="categoria" id="categoria" class="form-control" [(ngModel)]='idCategoria'
+                        (change)='findByIdCategoria()'>
+                        <option *ngFor='let item of listaCategoria' value="{{item.id}}">{{item.nome}}</option>
+                    </select>
+                </div>
             </div>
         </div>
 
-        <div class = "d-flex justify-content-center ">
-            <button type = "submit" routerLink = "/produto" class = "btn btn-danger">Cancelar</button>
-            <button (click) = 'atualizar()'type = "submit" class = "btn btn-success ml-3">Atualizar</button>
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-center text-warning mt-4">Você tem certeza que deseja atualizar esse produto?</h4>
+            </div>
         </div>
+
+        <div class="row mt-5">
+            <div class="col-md-12 d-flex justify-content-center">
+                <button class="btn btn-danger mr-4 mb-4" style="margin-right: 10px;width: 10%;"
+                    routerLink="/produto">Cancelar</button>
+                <button class="btn btn-primary mb-4" style="width: 10% " type="submit" (click)='atualizar()'>Atualizar</button>
+            </div>
+
+        </div>
+
     </div>
-
-
-
-
-
 </div>
-</body>

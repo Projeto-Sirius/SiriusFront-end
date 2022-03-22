@@ -14,13 +14,15 @@ export class CategoriaEditComponent implements OnInit {
   categoria:Categoria = new Categoria()
   
   constructor(
-  private categoriaService:CategoriaService,
+  
    private router:Router,
    private route:ActivatedRoute,
+   private categoriaService:CategoriaService,
    private alertas:AlertasService
   ) { }
 
   ngOnInit(){
+
     if(environment.token = ''){
       this.router.navigate(['/entrar'])
     }
@@ -36,6 +38,7 @@ export class CategoriaEditComponent implements OnInit {
   }
 
   atualizar(){
+    
     this.categoriaService.putCategoria(this.categoria).subscribe((resp:Categoria) =>{
 
       this.categoria = resp

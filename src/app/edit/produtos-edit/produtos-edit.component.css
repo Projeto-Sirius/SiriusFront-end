@@ -1,5 +1,4 @@
-body{
-    height: 100%;
-    justify-content: center;
-    align-items: center;
+#bg{
+    background-color:rgb(17, 118, 136)!important;
+    border-radius: 30px;
 }

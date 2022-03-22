@@ -1,67 +1,35 @@
-<div class="container mt-5 mb-5">
-  
-    <div class="container mt-5 mb-5" id="bg">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-center text-white font-weight-bold mt-3"> 🌟Atualizar Postagem🌟</h1>
-            </div>
+<div class="container mb-5 mt-5 bg-black" id="bg">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center text-danger mt-3"> Atualizar Categoria </h1>
         </div>
-    
-    
-            <div class="form-group txt text-white font-weight-bold">
-                <label for="regiao">Região</label>
-                <select class="custom-select font-weight-bold text-dark" id="inputGroupSelect01">
-                    <option value="0"></option>
-                    <option value="Acre ">Acre </option>
-                    <option value="Alagoas"> Alagoas </option>
-                    <option value="Amapá"> Amapá</option>
-                    <option value="Amazonas"> Amazonas </option>
-                    <option value="Bahia"> Bahia </option>
-                    <option value="Ceará"> Ceará</option>
-                    <option value="Distrito Federal"> Distrito Federal </option>
-                    <option value="Espírito Santo"> Espírito Santo </option>
-                    <option value="Goiás"> Goiás </option>
-                    <option value="Maranhão"> Maranhão </option>
-                    <option value="Mato Grosso"> Mato Grosso </option>
-                    <option value="Mato Grosso do Sul"> Mato Grosso do Sul </option>
-                    <option value="Minas Gerais"> Minas Gerais </option>
-                    <option value="Paraná"> Paraná </option>
-                    <option value="Paraíba"> Paraíba </option>
-                    <option value="Pará"> Pará </option>
-                    <option value="Pernambuco"> Pernambuco</option>
-                    <option value="Piauí "> Piauí </option>
-                    <option value="Rio Grande do Norte"> Rio Grande do Norte </option>
-                    <option value="Rio Grande do Sul"> Rio Grande do Sul </option>
-                    <option value="Rio de Janeiro"> Rio de Janeiro</option>
-                    <option value="Rondônia"> Rondônia </option>
-                    <option value="Roraima "> Roraima </option>
-                    <option value="Santa Catarina"> Santa Catarina </option>
-                    <option value="Sergipe"> Sergipe </option>
-                    <option value="São Paulo"> São Paulo </option>
-                    <option value="Tocantins"> Tocantins </option>
-                  </select>
-            </div>
-    
+    </div>
+    <div class="row d-flex justify-content-center mt-4">  
+        <div class="col-md-4">
             <div class="form-group txt text-white font-weight-bold">
                 <label for="texto"> Nome:</label>
                 <input [(ngModel)]='categoria.nome' class="form-control" type="text" name="nome"
-                    placeholder="Digite o nome">
-                
+                    placeholder="Digite o nome">   
             </div>
             <div class="form-group txt text-white font-weight-bold">
                 <label for="usuario">Descricao:</label>
                 <input [(ngModel)]='categoria.descricao' class="form-control" type="text" name="descricao"
                     placeholder="descricao">
             </div>
-    
-            <div class="d-flex justify-content-center">
-                <button class="btn btn-info mr-4 mb-3 font-weight-bold" routerLink='/categoria'>Cancelar</button>
-                <button class="btn btn-info mb-3 font-weight-bold" (click)='atualizar()'>Atualizar</button>
-    
-            </div>
-    
         </div>
+        <div class="row">
+            <div class="col-md-12 mr-4">
+                <h4 class="text-center text-warning mt-4">Você tem certeza que deseja atualizar essa categoria?</h4>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12 d-flex justify-content-center">
+                <button class="btn btn-danger mr-4 mb-4" style="margin-right: 10px;width: 10%;"
+                routerLink="/categoria">Cancelar</button>
+                <button class="btn btn-primary mb-4" style="width: 10% " type="submit" (click)='atualizar()'>Atualizar</button>
+            </div>
+        </div> 
     </div>
+</div>
 
-<footer> <a href="index.html"> ☠  </a></footer>
 
